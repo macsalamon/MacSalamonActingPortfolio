@@ -1,0 +1,19 @@
+{
+  "name": "macsalamon-acting-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Mac Salamon Actor Portfolio - Astro Site",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "sync": "node scripts/sync-translations.js"
+  },
+  "dependencies": {
+    "astro": "^4.0.0"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

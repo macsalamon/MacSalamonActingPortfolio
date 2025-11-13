@@ -1,0 +1,137 @@
+lang: pl
+
+nav:
+  showreels: SHOWREELE
+  gallery: GALERIA
+  cv: CV
+  about: O MNIE
+  voiceover: LEKTORING
+  contact: KONTAKT
+
+hero:
+  name: Maciej Salamon
+  tagline: Aktor & Lektor
+  intro: Wielojęzyczny aktor i lektor w Wiedniu, Austria
+
+showreels:
+  title: Showreele
+  reels:
+    - id: general
+      label: Showreel Ogólny
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: german
+      label: Showreel Niemiecki
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: english
+      label: Showreel Angielski
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: polish
+      label: Showreel Polski
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: commercial
+      label: Showreel Reklamowy
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: dramatic
+      label: Showreel Dramatyczny
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+
+gallery:
+  title: Galeria
+  photos:
+    - src: "/media/headshots/01.jpg"
+      alt: "Maciej Salamon Zdjęcie 1"
+    - src: "/media/headshots/02.jpg"
+      alt: "Maciej Salamon Zdjęcie 2"
+    - src: "/media/headshots/03.jpg"
+      alt: "Maciej Salamon Zdjęcie 3"
+
+cv:
+  title: CV
+  downloadLabel: "Pobierz pełne CV (PDF)"
+  downloadUrl: "/media/cv/Maciej-Salamon-CV.pdf"
+  tabs:
+    general:
+      title: Informacje Ogólne
+      languages: "Języki: Polski (ojczysty), Niemiecki (ojczysty), Angielski (biegły), Rosyjski (podstawowy), Francuski (podstawowy)"
+      height: "Wzrost: 180 cm"
+      build: "Budowa: Atletyczna"
+      voiceType: "Rodzaj głosu: Baryton"
+      skills: "Umiejętności: Walka sceniczna, Teatr muzyczny, Lektoring, Akcenty (polski, niemiecki)"
+    filmtv:
+      title: Film / TV
+      credits:
+        - role: "Rola główna"
+          project: "Tytuł filmu"
+          year: "2023"
+          director: "Reżyser"
+    theatre:
+      title: Teatr / Musicale
+      credits:
+        - role: "Doc"
+          project: "We Will Rock You"
+          year: "2010-2012"
+          director: "Reżyser"
+        - role: "Profesor Abronsius"
+          project: "Taniec Wampirów"
+          year: "2008-2010"
+          director: "Reżyser"
+    education:
+      title: Edukacja / Warsztaty / Umiejętności
+      items:
+        - name: "Szkolenie teatru muzycznego"
+          institution: "Nazwa szkoły"
+          year: "2000-2004"
+        - name: "Warsztat aktorski"
+          institution: "Nazwa warsztatu"
+          year: "2023"
+
+about:
+  title: O Macieju
+  subtitle: Aktor, Lektor & Producent
+  bio1: "<p>Twoja treść biografii tutaj...</p>"
+  bio2: "<p>Więcej treści biografii...</p>"
+
+voiceover:
+  title: Próbki Lektorskie
+  description: Wybrane demo lektorskie pokazujące zakres aktorski
+
+contact:
+  title: Kontakt
+  emailLabel: "E-mail:"
+  phoneLabel: "Telefon:"
+  revealEmail: Kliknij, aby odsłonić e-mail
+  revealPhone: Kliknij, aby odsłonić telefon
+  agencyTitle: "Reprezentowany przez:"
+  agencyName: "Nazwa Agencji"
+  agencyEmail: "agencja@przyklad.pl"
+  agencyPhone: "+43 123 456 789"
+  formHeading: Formularz kontaktowy
+  form:
+    name: Imię *
+    emailLabel: E-mail *
+    message: Wiadomość *
+    consent: Zgadzam się na przetwarzanie moich danych osobowych (imię, e-mail, wiadomość) w celu odpowiedzi na moje zapytanie. Twoje dane nie będą udostępniane osobom trzecim. Zobacz naszą <a href="/privacy" target="_blank">Politykę Prywatności</a> po szczegóły. *
+    send: Wyślij wiadomość
+    sending: Wysyłanie...
+  validation:
+    honeypot: Przesłanie nie powiodło się. Spróbuj ponownie.
+    required: Proszę wypełnić wszystkie wymagane pola.
+    invalidEmail: Proszę podać prawidłowy adres e-mail.
+    noConsent: Proszę zaakceptować politykę prywatności, aby kontynuować.
+    noTurnstile: Proszę ukończyć sprawdzanie bezpieczeństwa.
+  messages:
+    success: Dziękuję za wiadomość! Odezwę się wkrótce.
+    error: Coś poszło nie tak. Spróbuj ponownie lub skontaktuj się ze mną bezpośrednio.
+  castingProfiles: Profile castingowe
+  profiles:
+    - name: "filmmakers.eu"
+      url: "https://www.filmmakers.eu/de/actors/matthias-salamon"
+    - name: "schauspielervideos.de"
+      url: "https://www.schauspielervideos.de/schauspieler/matthias-salamon"
+    - name: "etalenta.eu"
+      url: "https://www.etalenta.eu/profile/matthias-salamon"
+
+footer:
+  copyright: © 2025 Maciej Salamon. Wszelkie prawa zastrzeżone.
+  legal: Nota prawna
+  privacy: Polityka prywatności

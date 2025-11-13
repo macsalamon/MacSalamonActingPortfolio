@@ -1,0 +1,66 @@
+---
+const { translations, currentLang } = Astro.props;
+const t = translations[currentLang];
+const showreels = t.showreels.reels;
+---
+
+<div class="showreel-section">
+  <div class="showreel-selector">
+    {showreels.map((reel, index) => (
+      <button
+        class={`showreel-button ${index === 0 ? 'active' : ''}`}
+        data-reel-id={reel.id}
+      >
+        {reel.label}
+      </button>
+    ))}
+  </div>
+
+  <div class="showreel-player">
+    {showreels.map((reel, index) => (
+      <div
+        class={`showreel-embed ${index !== 0 ? 'hidden' : ''}`}
+        data-reel-embed={reel.id}
+      >
+        <iframe
+          src={reel.embedUrl}
+          width="auto"
+          allowfullscreen
+        ></iframe>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script>
+  function initShowreelSelector() {
+    const buttons = document.querySelectorAll('[data-reel-id]');
+    const embeds = document.querySelectorAll('[data-reel-embed]');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const reelId = button.getAttribute('data-reel-id');
+
+        // Update active button
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Show corresponding embed
+        embeds.forEach(embed => {
+          const embedId = embed.getAttribute('data-reel-embed');
+          embed.classList.toggle('hidden', embedId !== reelId);
+        });
+      });
+    });
+  }
+
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initShowreelSelector);
+  } else {
+    initShowreelSelector();
+  }
+
+  // Re-initialize when language changes
+  window.updateShowreelSelector = initShowreelSelector;
+</script>
