@@ -1,0 +1,620 @@
+---
+import '../styles/global.css';
+import ShowreelSelector from '../components/ShowreelSelector.astro';
+import PhotoGallery from '../components/PhotoGallery.astro';
+import CVTabs from '../components/CVTabs.astro';
+import { translations } from '../data/content.js';
+
+const currentLang = 'en';
+const t = translations[currentLang];
+---
+
+<!DOCTYPE html>
+<html lang={currentLang} data-lang={currentLang}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Matthias / Maciej Salamon - Professional multilingual actor and voice-over artist based in Vienna, Austria.">
+  <title>{t.hero.name} - {t.hero.tagline}</title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://macsalamon.com/" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Cloudflare Turnstile -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body id="top">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#top" class="logo">{t.hero.name}</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav aria-label="Main navigation" id="main-nav">
+          <ul>
+            <li><a href="#showreels">{t.nav.showreels}</a></li>
+            <li><a href="#gallery">{t.nav.gallery}</a></li>
+            <li><a href="#cv">{t.nav.cv}</a></li>
+            <li><a href="#about">{t.nav.about}</a></li>
+            <li><a href="#voiceover">{t.nav.voiceover}</a></li>
+            <li><a href="#contact">{t.nav.contact}</a></li>
+            <li>
+              <div class="language-switcher">
+                <button class="language-flag active" data-lang="en" aria-label="English">
+                  <img src="/media/flag-gb.png" alt="English" />
+                </button>
+                <button class="language-flag" data-lang="de" aria-label="Deutsch">
+                  <img src="/media/flag-de.png" alt="Deutsch" />
+                </button>
+                <button class="language-flag" data-lang="pl" aria-label="Polski">
+                  <img src="/media/flag-pl.png" alt="Polski" />
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section">
+      <div class="container">
+        <h1 class="sr-only">{t.hero.name} - {t.hero.tagline}</h1>
+
+        <div class="hero-headshot">
+          <img src="/media/headshot-main.jpg" alt={t.hero.name} />
+        </div>
+
+        <h2 class="hero-name">{t.hero.name}</h2>
+        <p class="hero-tagline">{t.hero.tagline}</p>
+        <p class="hero-intro">{t.hero.intro}</p>
+      </div>
+    </section>
+
+    <!-- Showreels Section -->
+    <section class="section collapsible-section" id="showreels">
+      <div class="container">
+        <div class="section-header" data-section="showreels">
+          <span class="toggle-icon">+</span>
+          <h2>{t.showreels.title}</h2>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="section-content" data-content="showreels">
+          <ShowreelSelector translations={translations} currentLang={currentLang} />
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section section-alt collapsible-section" id="gallery">
+      <div class="container">
+        <div class="section-header" data-section="gallery">
+          <span class="toggle-icon">+</span>
+          <h2>{t.gallery.title}</h2>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="section-content" data-content="gallery">
+          <PhotoGallery translations={translations} currentLang={currentLang} />
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Section -->
+    <section class="section collapsible-section" id="cv">
+      <div class="container">
+        <div class="section-header" data-section="cv">
+          <span class="toggle-icon">+</span>
+          <h2>{t.cv.title}</h2>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="section-content" data-content="cv">
+          <CVTabs translations={translations} currentLang={currentLang} />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-alt collapsible-section" id="about">
+      <div class="container">
+        <div class="section-header" data-section="about">
+          <span class="toggle-icon">+</span>
+          <h2>{t.about.title}</h2>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="section-content" data-content="about">
+          <div class="about-content">
+            <h3 class="about-subtitle">{t.about.subtitle}</h3>
+            <div class="mb-md" set:html={t.about.bio1}></div>
+            <div class="mb-md" set:html={t.about.bio2}></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Voice-Over Section -->
+    <section class="section collapsible-section" id="voiceover">
+      <div class="container">
+        <div class="section-header" data-section="voiceover">
+          <span class="toggle-icon">+</span>
+          <h2>{t.voiceover.title}</h2>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="section-content" data-content="voiceover">
+          <p class="text-center mb-md" style="color: var(--color-text-muted);">{t.voiceover.description}</p>
+          <p class="text-center" style="color: var(--color-text-muted);">(Audio player will be added here - please provide audio samples)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="contact-content">
+          <h2 class="text-center">{t.contact.title}</h2>
+
+          <!-- Contact Methods (Obfuscated) -->
+          <p class="contact-methods-inline">
+            <strong class="contact-email-label">{t.contact.emailLabel}</strong>
+            <a href="#" id="email-link" data-user="info" data-domain="matthiassalamon.com" class="contact-reveal-email">{t.contact.revealEmail}</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <strong class="contact-phone-label">{t.contact.phoneLabel}</strong>
+            <span id="phone-display" data-phone="+436766002632" class="contact-reveal-phone">{t.contact.revealPhone}</span>
+          </p>
+
+          <!-- Agency Info -->
+          {t.contact.agencyName && (
+            <p class="contact-methods-inline">
+              <strong>{t.contact.agencyTitle}</strong> {t.contact.agencyName}
+              {t.contact.agencyEmail && <> | <a href={`mailto:${t.contact.agencyEmail}`}>{t.contact.agencyEmail}</a></>}
+              {t.contact.agencyPhone && <> | {t.contact.agencyPhone}</>}
+            </p>
+          )}
+
+          <h3 class="contact-subheader">{t.contact.formHeading}</h3>
+
+          <!-- Success/Error Messages -->
+          <div id="form-message" class="form-message" style="display: none;"></div>
+
+          <form class="contact-form" id="contact-form">
+            <!-- Honeypot Field -->
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Website (leave blank)</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="name">{t.contact.form.name}</label>
+              <input type="text" id="name" name="name" required aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label for="email">{t.contact.form.emailLabel}</label>
+              <input type="email" id="email" name="email" required aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label for="message">{t.contact.form.message}</label>
+              <textarea id="message" name="message" required aria-required="true" rows="6"></textarea>
+            </div>
+
+            <!-- GDPR Consent -->
+            <div class="form-group consent-group">
+              <label class="consent-label">
+                <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                <span class="consent-text" set:html={t.contact.form.consent}></span>
+              </label>
+            </div>
+
+            <!-- Cloudflare Turnstile -->
+            <div id="turnstile-container"></div>
+
+            <button type="submit" class="submit-button">{t.contact.form.send}</button>
+          </form>
+
+          <!-- Casting Profile Links -->
+          <div class="casting-links">
+            <h3>{t.contact.castingProfiles}</h3>
+            <div class="casting-links-list">
+              {t.contact.profiles && t.contact.profiles.map((profile) => (
+                <a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.name}</a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-copyright">{t.footer.copyright}</p>
+      <div class="footer-links">
+        <a href="/legal">{t.footer.legal}</a>
+        <a href="/privacy">{t.footer.privacy}</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    import { translations } from '../data/content.js';
+
+    let currentLang = 'en';
+
+    // Language switcher functionality
+    function initLanguageSwitcher() {
+      document.querySelectorAll('.language-flag').forEach(button => {
+        button.addEventListener('click', () => {
+          const lang = button.getAttribute('data-lang');
+          if (lang) {
+            switchLanguage(lang, true);
+          }
+        });
+      });
+    }
+
+    function switchLanguage(lang, savePreference = false) {
+      currentLang = lang;
+      const t = translations[lang];
+      document.documentElement.setAttribute('lang', lang);
+      document.documentElement.setAttribute('data-lang', lang);
+
+      if (savePreference) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Update active language flag
+      document.querySelectorAll('.language-flag').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      updateContent(t);
+    }
+
+    function updateContent(t) {
+      // Logo / Name
+      const logo = document.querySelector('.logo');
+      if (logo) logo.textContent = t.hero.name;
+
+      // Navigation
+      const navLinks = document.querySelectorAll('nav a');
+      if (navLinks[0]) navLinks[0].textContent = t.nav.showreels;
+      if (navLinks[1]) navLinks[1].textContent = t.nav.gallery;
+      if (navLinks[2]) navLinks[2].textContent = t.nav.cv;
+      if (navLinks[3]) navLinks[3].textContent = t.nav.about;
+      if (navLinks[4]) navLinks[4].textContent = t.nav.voiceover;
+      if (navLinks[5]) navLinks[5].textContent = t.nav.contact;
+
+      // Hero
+      const heroName = document.querySelector('.hero-name');
+      if (heroName) heroName.textContent = t.hero.name;
+      const heroTagline = document.querySelector('.hero-tagline');
+      if (heroTagline) heroTagline.textContent = t.hero.tagline;
+      const heroIntro = document.querySelector('.hero-intro');
+      if (heroIntro) heroIntro.textContent = t.hero.intro;
+
+      // Section headers
+      const showreelsHeader = document.querySelector('[data-section="showreels"] h2');
+      if (showreelsHeader) showreelsHeader.textContent = t.showreels.title;
+
+      const galleryHeader = document.querySelector('[data-section="gallery"] h2');
+      if (galleryHeader) galleryHeader.textContent = t.gallery.title;
+
+      const cvHeader = document.querySelector('[data-section="cv"] h2');
+      if (cvHeader) cvHeader.textContent = t.cv.title;
+
+      const aboutHeader = document.querySelector('[data-section="about"] h2');
+      if (aboutHeader) aboutHeader.textContent = t.about.title;
+
+      const voiceoverHeader = document.querySelector('[data-section="voiceover"] h2');
+      if (voiceoverHeader) voiceoverHeader.textContent = t.voiceover.title;
+
+      const contactTitle = document.querySelector('#contact h2');
+      if (contactTitle) contactTitle.textContent = t.contact.title;
+
+      // Contact form
+      const contactEmailLabel = document.querySelector('.contact-email-label');
+      if (contactEmailLabel) contactEmailLabel.textContent = t.contact.emailLabel;
+      const contactPhoneLabel = document.querySelector('.contact-phone-label');
+      if (contactPhoneLabel) contactPhoneLabel.textContent = t.contact.phoneLabel;
+      const contactRevealEmail = document.querySelector('.contact-reveal-email');
+      if (contactRevealEmail && !contactRevealEmail.href.includes('mailto:')) {
+        contactRevealEmail.textContent = t.contact.revealEmail;
+      }
+      const contactRevealPhone = document.querySelector('.contact-reveal-phone');
+      if (contactRevealPhone && contactRevealPhone.style.cursor !== 'text') {
+        contactRevealPhone.textContent = t.contact.revealPhone;
+      }
+
+      const contactSubheader = document.querySelector('.contact-subheader');
+      if (contactSubheader) contactSubheader.textContent = t.contact.formHeading;
+
+      const nameLabel = document.querySelector('label[for="name"]');
+      if (nameLabel) nameLabel.textContent = t.contact.form.name;
+      const emailLabel = document.querySelector('label[for="email"]');
+      if (emailLabel) emailLabel.textContent = t.contact.form.emailLabel;
+      const messageLabel = document.querySelector('label[for="message"]');
+      if (messageLabel) messageLabel.textContent = t.contact.form.message;
+      const consentText = document.querySelector('.consent-text');
+      if (consentText) consentText.innerHTML = t.contact.form.consent;
+      const submitBtn = document.querySelector('.submit-button');
+      if (submitBtn && !submitBtn.disabled) submitBtn.textContent = t.contact.form.send;
+
+      // Footer
+      const footerCopyright = document.querySelector('.footer-copyright');
+      if (footerCopyright) footerCopyright.textContent = t.footer.copyright;
+      const footerLinks = document.querySelectorAll('.footer-links a');
+      if (footerLinks[0]) footerLinks[0].textContent = t.footer.legal;
+      if (footerLinks[1]) footerLinks[1].textContent = t.footer.privacy;
+    }
+
+    // Collapsible sections
+    function initCollapsibleSections() {
+      document.querySelectorAll('.section-header').forEach(header => {
+        header.addEventListener('click', () => {
+          const section = header.getAttribute('data-section');
+          const content = document.querySelector(`[data-content="${section}"]`);
+          const icons = header.querySelectorAll('.toggle-icon');
+
+          if (content) {
+            const isOpen = content.classList.contains('open');
+            content.classList.toggle('open');
+
+            icons.forEach(icon => {
+              icon.textContent = isOpen ? '+' : '-';
+            });
+          }
+        });
+      });
+    }
+
+    // Email/Phone obfuscation
+    function initObfuscation() {
+      const emailLink = document.getElementById('email-link');
+      if (emailLink) {
+        emailLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          const user = emailLink.getAttribute('data-user');
+          const domain = emailLink.getAttribute('data-domain');
+          const email = user + '@' + domain;
+          emailLink.href = 'mailto:' + email;
+          emailLink.textContent = email;
+        });
+      }
+
+      const phoneDisplay = document.getElementById('phone-display');
+      if (phoneDisplay) {
+        phoneDisplay.addEventListener('click', () => {
+          const phone = phoneDisplay.getAttribute('data-phone');
+          phoneDisplay.textContent = phone;
+          phoneDisplay.style.cursor = 'text';
+        });
+      }
+    }
+
+    // Turnstile widget
+    let turnstileWidgetId = null;
+
+    function initTurnstile() {
+      if (typeof window.turnstile === 'undefined') {
+        setTimeout(initTurnstile, 100);
+        return;
+      }
+
+      const container = document.getElementById('turnstile-container');
+      if (container && !turnstileWidgetId) {
+        turnstileWidgetId = window.turnstile.render('#turnstile-container', {
+          sitekey: '0x4AAAAAAB_4dZpbJAorChk5',
+          theme: 'light',
+          size: 'normal',
+        });
+      }
+    }
+
+    // Contact form handling
+    function initContactForm() {
+      const form = document.getElementById('contact-form');
+      const messageDiv = document.getElementById('form-message');
+
+      form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const t = translations[currentLang];
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+        const consent = document.getElementById('consent').checked;
+        const honeypot = document.getElementById('website').value;
+
+        if (honeypot) {
+          showMessage(t.contact.validation.honeypot, 'error');
+          return;
+        }
+
+        if (!name || !email || !message) {
+          showMessage(t.contact.validation.required, 'error');
+          return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          showMessage(t.contact.validation.invalidEmail, 'error');
+          return;
+        }
+
+        if (!consent) {
+          showMessage(t.contact.validation.noConsent, 'error');
+          return;
+        }
+
+        const turnstileToken = window.turnstile?.getResponse(turnstileWidgetId);
+        if (!turnstileToken) {
+          showMessage(t.contact.validation.noTurnstile, 'error');
+          return;
+        }
+
+        const submitBtn = form.querySelector('.submit-button');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = t.contact.form.sending;
+
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, message, turnstileToken })
+          });
+
+          const result = await response.json();
+
+          if (!response.ok) {
+            throw new Error(result.error || 'Failed to send message');
+          }
+
+          showMessage(t.contact.messages.success, 'success');
+          form.reset();
+          if (turnstileWidgetId !== null) {
+            window.turnstile?.reset(turnstileWidgetId);
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+          showMessage(t.contact.messages.error, 'error');
+          if (turnstileWidgetId !== null) {
+            window.turnstile?.reset(turnstileWidgetId);
+          }
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = t.contact.form.send;
+        }
+      });
+
+      function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.className = 'form-message ' + type;
+        messageDiv.style.display = 'block';
+        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        if (type === 'success') {
+          setTimeout(() => {
+            messageDiv.style.display = 'none';
+          }, 5000);
+        }
+      }
+    }
+
+    // Navigation click handler
+    function initNavigation() {
+      document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+
+          if (!targetSection) return;
+
+          const allContents = document.querySelectorAll('.section-content');
+          allContents.forEach(content => {
+            content.style.transition = 'none';
+            content.classList.remove('open');
+          });
+          document.querySelectorAll('.toggle-icon').forEach(icon => {
+            icon.textContent = '+';
+          });
+
+          const targetContent = targetSection.querySelector('.section-content');
+          const targetIcons = targetSection.querySelectorAll('.toggle-icon');
+          if (targetContent) {
+            targetContent.classList.add('open');
+            targetIcons.forEach(icon => {
+              icon.textContent = '-';
+            });
+          }
+
+          document.body.offsetHeight;
+          targetSection.offsetHeight;
+          document.body.offsetHeight;
+
+          allContents.forEach(content => {
+            content.style.transition = '';
+          });
+
+          const targetPosition = targetSection.offsetTop;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        });
+      });
+    }
+
+    // Hamburger menu
+    function initHamburgerMenu() {
+      const hamburger = document.getElementById('hamburger');
+      const nav = document.getElementById('main-nav');
+
+      hamburger?.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav?.classList.toggle('active');
+      });
+
+      document.querySelectorAll('#main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger?.classList.remove('active');
+          nav?.classList.remove('active');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (nav?.classList.contains('active') &&
+            !nav.contains(e.target) &&
+            !hamburger.contains(e.target)) {
+          hamburger?.classList.remove('active');
+          nav?.classList.remove('active');
+        }
+      });
+    }
+
+    // Initialize all
+    function init() {
+      const savedLang = localStorage.getItem('selectedLanguage');
+
+      if (savedLang) {
+        switchLanguage(savedLang, false);
+      } else {
+        const browserLang = navigator.language.slice(0, 2);
+        const supportedLangs = ['de', 'pl', 'en'];
+        const detectedLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
+        switchLanguage(detectedLang, false);
+      }
+
+      initLanguageSwitcher();
+      initCollapsibleSections();
+      initObfuscation();
+      initTurnstile();
+      initContactForm();
+      initNavigation();
+      initHamburgerMenu();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>

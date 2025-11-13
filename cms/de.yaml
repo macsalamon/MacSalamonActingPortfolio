@@ -1,0 +1,137 @@
+lang: de
+
+nav:
+  showreels: SHOWREELS
+  gallery: GALERIE
+  cv: LEBENSLAUF
+  about: ÜBER MICH
+  voiceover: VOICE-OVER
+  contact: KONTAKT
+
+hero:
+  name: Matthias Salamon
+  tagline: Schauspieler & Sprecher
+  intro: Mehrsprachiger Schauspieler und Sprecher in Wien, Österreich
+
+showreels:
+  title: Showreels
+  reels:
+    - id: general
+      label: Allgemeines Showreel
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: german
+      label: Deutsches Showreel
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: english
+      label: Englisches Showreel
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: polish
+      label: Polnisches Showreel
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: commercial
+      label: Werbe-Showreel
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+    - id: dramatic
+      label: Dramatisches Showreel
+      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
+
+gallery:
+  title: Galerie
+  photos:
+    - src: "/media/headshots/01.jpg"
+      alt: "Matthias Salamon Headshot 1"
+    - src: "/media/headshots/02.jpg"
+      alt: "Matthias Salamon Headshot 2"
+    - src: "/media/headshots/03.jpg"
+      alt: "Matthias Salamon Headshot 3"
+
+cv:
+  title: Lebenslauf
+  downloadLabel: "Vollständigen Lebenslauf herunterladen (PDF)"
+  downloadUrl: "/media/cv/Matthias-Salamon-CV.pdf"
+  tabs:
+    general:
+      title: Allgemeine Infos
+      languages: "Sprachen: Polnisch (Muttersprache), Deutsch (Muttersprache), Englisch (fließend), Russisch (Grundkenntnisse), Französisch (Grundkenntnisse)"
+      height: "Größe: 180 cm"
+      build: "Statur: Athletisch"
+      voiceType: "Stimmlage: Bariton"
+      skills: "Fähigkeiten: Bühnenkampf, Musical, Synchronsprechen, Dialekte (polnischer, deutscher Akzent)"
+    filmtv:
+      title: Film / TV
+      credits:
+        - role: "Hauptrolle"
+          project: "Filmtitel"
+          year: "2023"
+          director: "Regisseur"
+    theatre:
+      title: Theater / Musicals
+      credits:
+        - role: "Doc"
+          project: "We Will Rock You"
+          year: "2010-2012"
+          director: "Regisseur"
+        - role: "Professor Abronsius"
+          project: "Tanz der Vampire"
+          year: "2008-2010"
+          director: "Regisseur"
+    education:
+      title: Ausbildung / Workshops / Skills
+      items:
+        - name: "Musical-Ausbildung"
+          institution: "Schule"
+          year: "2000-2004"
+        - name: "Schauspiel-Workshop"
+          institution: "Workshop"
+          year: "2023"
+
+about:
+  title: Über Matthias
+  subtitle: Schauspieler, Sprecher & Produzent
+  bio1: "<p>Ihr Bio-Inhalt kommt hierher...</p>"
+  bio2: "<p>Mehr Bio-Inhalt...</p>"
+
+voiceover:
+  title: Voice-Over Demos
+  description: Ausgewählte Sprechproben mit schauspielerischem Ausdruck
+
+contact:
+  title: Kontakt
+  emailLabel: "E-Mail:"
+  phoneLabel: "Telefon:"
+  revealEmail: Klicken Sie, um E-Mail anzuzeigen
+  revealPhone: Klicken Sie, um Telefon anzuzeigen
+  agencyTitle: "Vertreten durch:"
+  agencyName: "Agentur Name"
+  agencyEmail: "agentur@beispiel.de"
+  agencyPhone: "+43 123 456 789"
+  formHeading: Kontaktformular
+  form:
+    name: Name *
+    emailLabel: E-Mail *
+    message: Nachricht *
+    consent: Ich stimme der Verarbeitung meiner personenbezogenen Daten (Name, E-Mail, Nachricht) zum Zweck der Beantwortung meiner Anfrage zu. Ihre Daten werden nicht an Dritte weitergegeben. Siehe unsere <a href="/privacy" target="_blank">Datenschutzerklärung</a> für Details. *
+    send: Nachricht senden
+    sending: Wird gesendet...
+  validation:
+    honeypot: Übermittlung fehlgeschlagen. Bitte versuchen Sie es erneut.
+    required: Bitte füllen Sie alle Pflichtfelder aus.
+    invalidEmail: Bitte geben Sie eine gültige E-Mail-Adresse ein.
+    noConsent: Bitte stimmen Sie der Datenschutzerklärung zu, um fortzufahren.
+    noTurnstile: Bitte schließen Sie die Sicherheitsüberprüfung ab.
+  messages:
+    success: Vielen Dank für Ihre Nachricht! Ich melde mich bald bei Ihnen.
+    error: Etwas ist schief gelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt.
+  castingProfiles: Casting-Profile
+  profiles:
+    - name: "filmmakers.eu"
+      url: "https://www.filmmakers.eu/de/actors/matthias-salamon"
+    - name: "schauspielervideos.de"
+      url: "https://www.schauspielervideos.de/schauspieler/matthias-salamon"
+    - name: "etalenta.eu"
+      url: "https://www.etalenta.eu/profile/matthias-salamon"
+
+footer:
+  copyright: © 2025 Matthias Salamon. Alle Rechte vorbehalten.
+  legal: Impressum
+  privacy: Datenschutz
