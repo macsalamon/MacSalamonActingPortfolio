@@ -1,54 +1,105 @@
 ---
 const { translations, currentLang } = Astro.props;
 const t = translations[currentLang];
-const showreels = t.showreels.reels;
+
+// Showreel data from FileDrop
+const showreels = [
+  { id: 'main', label: 'Main', url: 'https://www.filmmakers.eu/de/actors/matthias-salamon/video/99313?autoplay=false&background_color=none&iframe=v2&playlist=h' },
+  { id: 'german-native', label: 'German (native)', url: 'https://www.filmmakers.eu/de/actors/matthias-salamon/video/102891?autoplay=false&background_color=none&iframe=v2&playlist=h' },
+  { id: 'english', label: 'English', url: 'https://www.filmmakers.eu/de/actors/matthias-salamon/video/104954?autoplay=false&background_color=none&iframe=v2&playlist=h' },
+  { id: 'polish', label: 'Polish', url: 'https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h' },
+  { id: 'german-accented', label: 'German (accented)', url: 'https://www.filmmakers.eu/de/actors/matthias-salamon/video/106684?autoplay=false&background_color=none&iframe=v2&playlist=h' },
+  { id: 'russian', label: 'Russian', url: 'https://www.filmmakers.eu/de/actors/matthias-salamon/video/106135?autoplay=false&background_color=none&iframe=v2&playlist=h' }
+];
 ---
 
-<div class="showreel-section">
-  <div class="showreel-selector">
-    {showreels.map((reel, index) => (
-      <button
-        class={`showreel-button ${index === 0 ? 'active' : ''}`}
-        data-reel-id={reel.id}
-      >
-        {reel.label}
-      </button>
-    ))}
+<div class="showreel-comparison">
+  <!-- Schauspielervideos.de Player (with built-in navigation) -->
+  <div class="player-comparison-section">
+    <div class="player-wrapper">
+      <iframe
+        class="sv-video"
+        src="https://www.schauspielervideos.de/video/maciej-salamon.html?responsiveHeight=1&vs=y&autoplay=0"
+        width="100%"
+        height="800"
+        frameborder="0"
+        scrolling="no"
+        style="width:1px;min-width:100%"
+        allow="fullscreen *"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 
-  <div class="showreel-player">
-    {showreels.map((reel, index) => (
-      <div
-        class={`showreel-embed ${index !== 0 ? 'hidden' : ''}`}
-        data-reel-embed={reel.id}
-      >
-        <iframe
-          src={reel.embedUrl}
-          width="auto"
-          allowfullscreen
-        ></iframe>
-      </div>
-    ))}
+  <!-- Filmmakers.eu Player (with custom selector) -->
+  <div class="player-comparison-section">
+    <div class="showreel-selector">
+      {showreels.map((reel, index) => (
+        <button
+          class={`showreel-tab ${index === 0 ? 'active' : ''}`}
+          data-showreel={reel.id}
+        >
+          {reel.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="player-wrapper filmmakers-player-container">
+      {showreels.map((reel, index) => (
+        <div
+          class="filmmakers-embed"
+          data-embed={reel.id}
+          data-url={reel.url}
+          style={`position: relative; display: ${index === 0 ? 'block' : 'none'}; height: 0; padding: 0; -webkit-overflow-scrolling: touch; overflow: hidden; -ms-overflow-style: -ms-autohiding-scrollbar; padding-top: 80%;`}
+        >
+          <iframe
+            class="filmmakers-iframe"
+            src={index === 0 ? reel.url : ''}
+            width="auto"
+            allowfullscreen
+            style="border: none; position: absolute; top: 0; right: 0; left: 0; bottom: 0; height: 100%; width: 100%; border: 0;">
+          </iframe>
+        </div>
+      ))}
+    </div>
   </div>
 </div>
 
+<!-- Load Schauspielervideos.de embed script -->
+<script is:inline src="https://www.schauspielervideos.de/res2/dist/lbp-embed.min.js"></script>
+
 <script>
   function initShowreelSelector() {
-    const buttons = document.querySelectorAll('[data-reel-id]');
-    const embeds = document.querySelectorAll('[data-reel-embed]');
+    const tabs = document.querySelectorAll('[data-showreel]');
+    const embeds = document.querySelectorAll('[data-embed]');
 
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const reelId = button.getAttribute('data-reel-id');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const showreelId = tab.getAttribute('data-showreel');
 
-        // Update active button
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+        // Update active tab
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
 
-        // Show corresponding embed
+        // Show corresponding embed, hide others, and manage iframe loading
         embeds.forEach(embed => {
-          const embedId = embed.getAttribute('data-reel-embed');
-          embed.classList.toggle('hidden', embedId !== reelId);
+          const embedId = embed.getAttribute('data-embed');
+          const iframe = embed.querySelector('.filmmakers-iframe');
+          const url = embed.getAttribute('data-url');
+
+          if (embedId === showreelId) {
+            // Show the embed and load the video
+            embed.style.display = 'block';
+            if (iframe && url && iframe.src !== url) {
+              iframe.src = url;
+            }
+          } else {
+            // Hide the embed and stop the video by clearing src
+            embed.style.display = 'none';
+            if (iframe && iframe.src) {
+              iframe.src = '';
+            }
+          }
         });
       });
     });
@@ -64,3 +115,66 @@ const showreels = t.showreels.reels;
   // Re-initialize when language changes
   window.updateShowreelSelector = initShowreelSelector;
 </script>
+
+<style>
+  .showreel-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .player-comparison-section {
+    width: 100%;
+  }
+
+  .player-wrapper {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Showreel Selector (similar to audio player tabs) */
+  .showreel-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+    justify-content: center;
+  }
+
+  .showreel-tab {
+    padding: 10px 20px;
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+
+  .showreel-tab:hover {
+    background: var(--color-surface-elevated);
+    border-color: var(--color-accent);
+  }
+
+  .showreel-tab.active {
+    background: var(--color-accent);
+    color: white;
+    border-color: var(--color-accent);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .showreel-selector {
+      flex-direction: column;
+    }
+
+    .showreel-tab {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>

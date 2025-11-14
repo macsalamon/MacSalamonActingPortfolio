@@ -35,7 +35,7 @@ function syncTranslations() {
   const translationsString = `export const translations = ${JSON.stringify(translations, null, 2)};`;
 
   // Find and replace the translations object in the file
-  const regex = /export const translations = \{[\s\S]*?\n\};(?=\n\n)/;
+  const regex = /export const translations = \{[\s\S]*?\n\};/;
 
   if (!regex.test(contentFile)) {
     console.error('❌ Could not find translations export in content.js');

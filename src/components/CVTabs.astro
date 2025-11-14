@@ -15,24 +15,27 @@ const cvData = t.cv;
   <!-- General Info Tab -->
   <div class="cv-content active" data-content="general">
     <div class="cv-info-grid">
-      <p><strong>{cvData.tabs.general.languages}</strong></p>
-      <p><strong>{cvData.tabs.general.height}</strong></p>
-      <p><strong>{cvData.tabs.general.build}</strong></p>
-      <p><strong>{cvData.tabs.general.voiceType}</strong></p>
-      <p><strong>{cvData.tabs.general.skills}</strong></p>
+      <p>{cvData.tabs.general.languages}</p>
+      <p>{cvData.tabs.general.height}</p>
+      {cvData.tabs.general.eyes && <p>{cvData.tabs.general.eyes}</p>}
+      {cvData.tabs.general.hair && <p>{cvData.tabs.general.hair}</p>}
+      {cvData.tabs.general.build && <p>{cvData.tabs.general.build}</p>}
+      <p>{cvData.tabs.general.voiceType}</p>
+      <p>{cvData.tabs.general.skills}</p>
     </div>
   </div>
 
   <!-- Film/TV Tab -->
   <div class="cv-content" data-content="filmtv">
-    <div class="cv-credits">
+    <div class="cv-list">
       {cvData.tabs.filmtv.credits && cvData.tabs.filmtv.credits.map((credit) => (
-        <div class="credit-item">
-          <div class="credit-role">{credit.role}</div>
-          <div class="credit-project">{credit.project}</div>
-          <div class="credit-meta">
-            {credit.year} | {credit.director}
+        <div class="cv-list-item">
+          <div class="cv-list-main">
+            <span class="cv-year">{credit.year}</span>
+            <strong>{credit.project}</strong> – {credit.role}
+            {credit.director && <span class="cv-meta"> | {credit.director}</span>}
           </div>
+          {credit.production && <div class="cv-list-sub">{credit.production}</div>}
         </div>
       ))}
     </div>
@@ -40,14 +43,15 @@ const cvData = t.cv;
 
   <!-- Theatre Tab -->
   <div class="cv-content" data-content="theatre">
-    <div class="cv-credits">
+    <div class="cv-list">
       {cvData.tabs.theatre.credits && cvData.tabs.theatre.credits.map((credit) => (
-        <div class="credit-item">
-          <div class="credit-role">{credit.role}</div>
-          <div class="credit-project">{credit.project}</div>
-          <div class="credit-meta">
-            {credit.year} | {credit.director}
+        <div class="cv-list-item">
+          <div class="cv-list-main">
+            <span class="cv-year">{credit.year}</span>
+            <strong>{credit.project}</strong> – {credit.role}
+            {credit.director && <span class="cv-meta"> | {credit.director}</span>}
           </div>
+          {credit.venue && <div class="cv-list-sub">{credit.venue}</div>}
         </div>
       ))}
     </div>
@@ -55,12 +59,14 @@ const cvData = t.cv;
 
   <!-- Education Tab -->
   <div class="cv-content" data-content="education">
-    <div class="cv-credits">
+    <div class="cv-list">
       {cvData.tabs.education.items && cvData.tabs.education.items.map((item) => (
-        <div class="credit-item">
-          <div class="credit-role">{item.name}</div>
-          <div class="credit-project">{item.institution}</div>
-          <div class="credit-meta">{item.year}</div>
+        <div class="cv-list-item">
+          <div class="cv-list-main">
+            <span class="cv-year">{item.year}</span>
+            <strong>{item.name}</strong>
+          </div>
+          <div class="cv-list-sub">{item.institution}</div>
         </div>
       ))}
     </div>
@@ -81,41 +87,46 @@ const cvData = t.cv;
     gap: var(--spacing-sm);
   }
 
-  .cv-credits {
+  .cv-list {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
   }
 
-  .credit-item {
-    padding: var(--spacing-md);
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--color-border);
-    transition: all var(--transition);
+  .cv-list-item {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    line-height: 1.4;
   }
 
-  .credit-item:hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  .cv-list-item:last-child {
+    border-bottom: none;
   }
 
-  .credit-role {
-    font-weight: 700;
-    font-size: 18px;
+  .cv-list-main {
+    font-size: 15px;
     color: var(--color-text);
-    margin-bottom: 4px;
   }
 
-  .credit-project {
-    font-size: 16px;
-    color: var(--color-text-muted);
-    margin-bottom: 4px;
-  }
-
-  .credit-meta {
-    font-size: 14px;
+  .cv-year {
+    display: inline-block;
+    min-width: 75px;
+    font-weight: 600;
     color: var(--color-accent);
+    margin-right: 8px;
+  }
+
+  .cv-meta {
+    color: var(--color-text-muted);
+    font-weight: 400;
+  }
+
+  .cv-list-sub {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    padding-left: 83px;
+    font-style: italic;
+    margin-top: 2px;
   }
 </style>
 
