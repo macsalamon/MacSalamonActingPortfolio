@@ -1,0 +1,331 @@
+---
+import { Image } from 'astro:assets';
+
+const { translations, currentLang } = Astro.props;
+const t = translations[currentLang];
+
+// Dynamically import all gallery images
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/headshots/gallery/*.jpg', { eager: true });
+
+// Sort images by filename (1.jpg, 2.jpg, ..., 15.jpg)
+const sortedImages = Object.entries(images).sort((a, b) => {
+  const numA = parseInt(a[0].match(/\/(\d+)\.jpg$/)?.[1] || '0');
+  const numB = parseInt(b[0].match(/\/(\d+)\.jpg$/)?.[1] || '0');
+  return numA - numB;
+});
+
+const galleryPhotos = sortedImages
+  .slice(0, 10)  // Only use first 10 photos for 5x2 grid
+  .map(([path, module]) => ({
+    image: module.default,
+    alt: t.gallery.photos?.[0]?.alt || 'Headshot photo',
+    path
+  }));
+---
+
+<div class="gallery-grid-container">
+  <div class="gallery-grid" id="grid-gallery-grid">
+    {galleryPhotos.map((photo, index) => (
+      <div class="gallery-grid-item" data-index={index}>
+        <Image
+          src={photo.image}
+          alt={`${photo.alt} ${index + 1}`}
+          width={600}
+          height={800}
+          quality={85}
+          format="webp"
+          loading={index < 6 ? 'eager' : 'lazy'}
+          class="gallery-grid-img"
+          data-zoom-index={index}
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
+<!-- Zoom Modal -->
+<div class="gallery-zoom-modal hidden" id="grid-zoom-modal">
+  <div class="zoom-overlay" id="grid-zoom-overlay"></div>
+  <div class="zoom-image-wrapper" id="grid-zoom-image-wrapper">
+    {galleryPhotos.map((photo, index) => (
+      <Image
+        src={photo.image}
+        alt={`${photo.alt} ${index + 1}`}
+        width={1600}
+        height={2133}
+        quality={90}
+        format="webp"
+        loading="lazy"
+        class="grid-zoom-image hidden"
+        data-zoom-index={index}
+      />
+    ))}
+  </div>
+  <button class="zoom-close" id="grid-zoom-close">×</button>
+  <button class="zoom-nav zoom-prev" id="grid-zoom-prev">‹</button>
+  <button class="zoom-nav zoom-next" id="grid-zoom-next">›</button>
+</div>
+
+<style>
+  .gallery-grid-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+  }
+
+  .gallery-grid-item {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    cursor: zoom-in;
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  .gallery-grid-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  }
+
+  .gallery-grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+  /* Zoom Modal */
+  .gallery-zoom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-zoom-modal.hidden {
+    display: none;
+  }
+
+  .zoom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: zoom-out;
+  }
+
+  .zoom-image-wrapper {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    z-index: 10000;
+  }
+
+  .grid-zoom-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+    cursor: zoom-out;
+  }
+
+  .grid-zoom-image.hidden {
+    display: none;
+  }
+
+  .zoom-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-text);
+    font-size: 32px;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    transition: all var(--transition);
+  }
+
+  .zoom-close:hover {
+    background: white;
+    transform: rotate(90deg);
+  }
+
+  .zoom-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-text);
+    font-size: 48px;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .zoom-nav:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .zoom-prev {
+    left: 20px;
+  }
+
+  .zoom-next {
+    right: 20px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1200px) {
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: var(--spacing-sm);
+    }
+
+    .zoom-nav {
+      width: 50px;
+      height: 50px;
+      font-size: 36px;
+    }
+
+    .zoom-prev {
+      left: 10px;
+    }
+
+    .zoom-next {
+      right: 10px;
+    }
+  }
+</style>
+
+<script>
+  let currentZoomIndex = 0;
+
+  function initPhotoGridGallery() {
+    const gridItems = document.querySelectorAll('.gallery-grid-item');
+    const zoomModal = document.getElementById('grid-zoom-modal');
+    const zoomImages = document.querySelectorAll('.grid-zoom-image');
+    const zoomClose = document.getElementById('grid-zoom-close');
+    const zoomOverlay = document.getElementById('grid-zoom-overlay');
+    const zoomPrev = document.getElementById('grid-zoom-prev');
+    const zoomNext = document.getElementById('grid-zoom-next');
+
+    if (!gridItems || gridItems.length === 0) return;
+
+    const totalPhotos = gridItems.length;
+
+    function showZoomImage(index: number) {
+      currentZoomIndex = index;
+      zoomImages.forEach((img, i) => {
+        if (i === index) {
+          img.classList.remove('hidden');
+        } else {
+          img.classList.add('hidden');
+        }
+      });
+    }
+
+    function goToNextZoom() {
+      const nextIndex = (currentZoomIndex + 1) % totalPhotos;
+      showZoomImage(nextIndex);
+    }
+
+    function goToPrevZoom() {
+      const prevIndex = (currentZoomIndex - 1 + totalPhotos) % totalPhotos;
+      showZoomImage(prevIndex);
+    }
+
+    // Click on grid item to open zoom
+    gridItems.forEach((item, index) => {
+      const img = item.querySelector('img');
+      img?.addEventListener('click', () => {
+        showZoomImage(index);
+        zoomModal?.classList.remove('hidden');
+      });
+    });
+
+    // Close zoom modal
+    function closeZoom() {
+      zoomModal?.classList.add('hidden');
+      zoomImages.forEach(img => img.classList.add('hidden'));
+    }
+
+    zoomClose?.addEventListener('click', closeZoom);
+    zoomOverlay?.addEventListener('click', closeZoom);
+    zoomImages.forEach(img => {
+      img.addEventListener('click', closeZoom);
+    });
+
+    // Navigation in zoom mode
+    zoomPrev?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      goToPrevZoom();
+    });
+
+    zoomNext?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      goToNextZoom();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!zoomModal?.classList.contains('hidden')) {
+        if (e.key === 'Escape') {
+          closeZoom();
+        } else if (e.key === 'ArrowLeft') {
+          goToPrevZoom();
+        } else if (e.key === 'ArrowRight') {
+          goToNextZoom();
+        }
+      }
+    });
+  }
+
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPhotoGridGallery);
+  } else {
+    initPhotoGridGallery();
+  }
+
+  // Re-initialize when language changes
+  (window as any).updatePhotoGallery = initPhotoGridGallery;
+</script>

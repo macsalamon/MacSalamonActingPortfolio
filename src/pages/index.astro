@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import ShowreelSelector from '../components/ShowreelSelector.astro';
-import PhotoGallery from '../components/PhotoGallery.astro';
+import PhotoGalleryGrid from '../components/PhotoGalleryGrid.astro';
 import CVTabs from '../components/CVTabs.astro';
 import { translations } from '../data/content.js';
 
@@ -71,13 +71,13 @@ const t = translations[currentLang];
   <main>
     <!-- Hero Section -->
     <section class="hero section">
-      <div class="container">
-        <h1 class="sr-only">{t.hero.name} - {t.hero.tagline}</h1>
+      <h1 class="sr-only">{t.hero.name} - {t.hero.tagline}</h1>
 
-        <div class="hero-headshot">
-          <img src="/media/headshot-main.jpg" alt={t.hero.name} />
-        </div>
+      <div class="hero-headshot">
+        <img src="/media/Hero_Portrait.jpg" alt={t.hero.name} />
+      </div>
 
+      <div class="hero-content">
         <h2 class="hero-name">{t.hero.name}</h2>
         <p class="hero-tagline">{t.hero.tagline}</p>
         <p class="hero-intro">{t.hero.intro}</p>
@@ -107,7 +107,7 @@ const t = translations[currentLang];
           <span class="toggle-icon">+</span>
         </div>
         <div class="section-content" data-content="gallery">
-          <PhotoGallery translations={translations} currentLang={currentLang} />
+          <PhotoGalleryGrid translations={translations} currentLang={currentLang} />
         </div>
       </div>
     </section>

@@ -11,9 +11,10 @@
     "sync": "node scripts/sync-translations.js"
   },
   "dependencies": {
-    "astro": "^4.0.0"
+    "astro": "^5.15.6"
   },
   "devDependencies": {
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "sharp": "^0.34.5"
   }
 }

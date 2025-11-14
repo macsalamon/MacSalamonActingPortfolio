@@ -366,13 +366,15 @@ Cloudflare Pages (configured for static output)
 - Smooth scroll behavior (CSS-based)
 
 ### Performance Optimizations Applied
+- **Astro Image Optimization:** WebP format with automatic optimization (~85% file size reduction)
+- **Lazy loading:** First 4 gallery images load eagerly, rest lazy-load
+- **Responsive sizing:** Different image sizes for mobile/desktop
 - `image-rendering: -webkit-optimize-contrast` for sharper images
 - `-webkit-font-smoothing: antialiased` for better text rendering
 - `scroll-behavior: smooth` for smooth anchor scrolling
 - Fixed background gradient (no repainting on scroll)
 
 ### Future Performance Enhancements
-- Image optimization (WebP format with JPEG fallback)
 - Font subsetting (reduce Raleway file size to only used characters)
 - Critical CSS extraction
 - Service Worker for offline functionality
@@ -470,40 +472,74 @@ The site foundation is complete. Next steps require user content:
 
 ---
 
-*Last updated: 2025-11-13*
+*Last updated: 2025-11-14*
 
-## Current Status (as of 2025-11-14)
+## Current Status (as of 2025-11-14 End of Day)
 
 ### Completed Features
-- ✅ Project structure set up (adapted from voice-over website)
-- ✅ YAML-based CMS for multilingual content (EN/DE/PL)
-- ✅ Showreel section with player comparison (Schauspielervideos.de vs Filmmakers.eu)
-  - SV player with built-in navigation
-  - Filmmakers player with custom selector (6 showreels from FileDrop URLs)
-  - Videos stop when switching tabs (no simultaneous playback)
-  - Autoplay disabled on SV player
-- ✅ CV section fully populated from German CV PDF
-  - All 16 Film/TV credits (2014-2024)
-  - All theatre/musical productions (1999-2024)
-  - Education and training
-  - Compact list format (1-2 lines per entry)
-  - Year-aligned layout
-- ✅ Sync script fixed (regex updated to work with content.js format)
+- ✅ **Hero Section Redesigned**
+  - Full viewport height portrait (100vh) on left side
+  - Fixed 3:4 aspect ratio (no cropping issues)
+  - Max-width 800px for ultra-wide displays (21:9+ monitors)
+  - Responsive: stacks vertically at 1050px (synced with hamburger menu)
+  - Clean edge-to-edge display (no border)
+  - Descriptive naming: `Hero_Portrait.jpg`
+
+- ✅ **Astro Image Optimization Implemented**
+  - WebP format with 85% quality
+  - Automatic optimization (~85% file size reduction)
+  - Lazy loading (first 4 images eager, rest lazy)
+  - Responsive sizing for mobile/desktop
+  - Images in `src/assets/` for Astro processing
+
+- ✅ **Photo Organization System**
+  - **Gallery photos:** Numbered `1.jpg` - `15.jpg` (easy reordering)
+  - **Section photos:** Descriptive names (`Hero_Portrait.jpg`, `Section_About_1.jpg`, etc.)
+  - READMEs in both `public/media/` and `src/assets/` locations
+  - Clear documentation for future updates
+
+- ✅ **Gallery Finalized: 5×2 Grid**
+  - Displays first 10 photos only (2 rows, 5 columns)
+  - Optimized with Astro Image (WebP)
+  - Click to zoom with navigation arrows
+  - Keyboard navigation (←/→ arrows, ESC to close)
+  - Responsive: 5 cols (desktop), 3 cols (tablet), 2 cols (mobile)
+  - Carousel version removed (keeping code clean)
+
+- ✅ **Showreels Finalized: Schauspielervideos.de**
+  - Auto-updates from casting profile
+  - Built-in navigation (no custom tabs needed)
+  - Clean, simple implementation
+  - Filmmakers player removed
+
+- ✅ **Responsive Breakpoints Synchronized**
+  - Hero mobile layout: 1050px (matches hamburger menu)
+  - Consistent UX across all viewport sizes
+  - No cramped text issues
+
+- ✅ **Project Structure Set Up**
+  - YAML-based CMS for multilingual content (EN/DE/PL)
+  - CV section fully populated (16 Film/TV, theatre, education)
+  - Sync script working correctly
+
+### Photo Inventory
+- **Gallery:** 15 photos (displaying 1-10, 11-15 available)
+- **Hero:** `Hero_Portrait.jpg` (from 2025 shoot)
+- **Sections:** 6 additional photos for future features
+- **Separator:** 1 horizontal photo (`Separator_Horizontal.jpg`)
 
 ### Pending Content
-- ⏳ Headshot photos (FileDrop/headshots/)
-- ⏳ CV PDF file (needs to be moved to public/media/cv/)
 - ⏳ Biography content (about section)
-- ⏳ Agency information
+- ⏳ Agency information (contact section)
 - ⏳ Polish YAML translations (currently using placeholders)
+- ⏳ CV PDF file (physical file needs upload)
 
 ### Next Steps
-1. Upload headshots to FileDrop/headshots/ folder
-2. Move CV PDF to public/media/cv/
-3. Write biography content for about section
-4. Translate CV content to Polish (pl.yaml)
-5. Add agency contact information
-6. Choose final showreel player implementation (SV or Filmmakers)
+1. Write biography content for about section
+2. Add agency contact information
+3. Translate content to Polish (pl.yaml)
+4. Upload CV PDF to `public/media/cv/`
+5. Consider adding section photos to About/Contact sections
 
 ## Version History
 
