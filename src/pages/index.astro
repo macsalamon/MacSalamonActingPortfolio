@@ -145,6 +145,11 @@ const t = translations[currentLang];
           </div>
           <div class="section-content" data-content="voiceover">
             <AudioPlayer />
+            <div class="voiceover-website-link">
+              <a href="https://salamon-voiceover.com/" target="_blank" rel="noopener noreferrer" class="voiceover-website-btn">
+                Salamon Voiceovers
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -174,6 +179,16 @@ const t = translations[currentLang];
                 {t.contact.agencyPhone && <> | {t.contact.agencyPhone}</>}
               </p>
             )}
+
+            <!-- Casting Profile Links -->
+            <div class="casting-links">
+              <h3>{t.contact.castingProfiles}</h3>
+              <div class="casting-links-list">
+                {t.contact.profiles && t.contact.profiles.map((profile) => (
+                  <a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.name}</a>
+                ))}
+              </div>
+            </div>
 
             <h3 class="contact-subheader">{t.contact.formHeading}</h3>
 
@@ -215,16 +230,6 @@ const t = translations[currentLang];
 
               <button type="submit" class="submit-button">{t.contact.form.send}</button>
             </form>
-
-            <!-- Casting Profile Links -->
-            <div class="casting-links">
-              <h3>{t.contact.castingProfiles}</h3>
-              <div class="casting-links-list">
-                {t.contact.profiles && t.contact.profiles.map((profile) => (
-                  <a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.name}</a>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -351,6 +356,77 @@ const t = translations[currentLang];
       const footerLinks = document.querySelectorAll('.footer-links a');
       if (footerLinks[0]) footerLinks[0].textContent = t.footer.legal;
       if (footerLinks[1]) footerLinks[1].textContent = t.footer.privacy;
+
+      // CV section
+      updateCVContent(t);
+    }
+
+    function updateCVContent(t) {
+      const cv = t.cv;
+      if (!cv || !cv.tabs) return;
+
+      // Tab buttons
+      const tabs = document.querySelectorAll('.cv-tab');
+      const tabKeys = ['general', 'filmtv', 'theatre', 'education'];
+      tabs.forEach((tab, i) => {
+        const key = tabKeys[i];
+        if (key && cv.tabs[key]) tab.textContent = cv.tabs[key].title;
+      });
+
+      // General info
+      const generalContent = document.querySelector('[data-content="general"] .cv-info-grid');
+      if (generalContent && cv.tabs.general) {
+        const g = cv.tabs.general;
+        const fields = [g.languages, g.height, g.eyes, g.hair, g.build, g.voiceType, g.skills]
+          .filter(Boolean);
+        generalContent.innerHTML = fields.map(f => `<p>${f}</p>`).join('');
+      }
+
+      // Film/TV credits
+      const filmtvContent = document.querySelector('[data-content="filmtv"] .cv-list');
+      if (filmtvContent && cv.tabs.filmtv?.credits) {
+        filmtvContent.innerHTML = cv.tabs.filmtv.credits.map(credit => `
+          <div class="cv-list-item">
+            <div class="cv-list-main">
+              <span class="cv-year">${credit.year}</span>
+              <strong>${credit.project}</strong> – ${credit.role}${credit.director ? ` <span class="cv-meta"> | ${credit.director}</span>` : ''}
+            </div>
+            ${credit.production ? `<div class="cv-list-sub">${credit.production}</div>` : ''}
+          </div>`).join('');
+      }
+
+      // Theatre credits
+      const theatreContent = document.querySelector('[data-content="theatre"] .cv-list');
+      if (theatreContent && cv.tabs.theatre?.credits) {
+        theatreContent.innerHTML = cv.tabs.theatre.credits.map(credit => `
+          <div class="cv-list-item">
+            <div class="cv-list-main">
+              <span class="cv-year">${credit.year}</span>
+              <strong>${credit.project}</strong> – ${credit.role}${credit.director ? ` <span class="cv-meta"> | ${credit.director}</span>` : ''}
+            </div>
+            ${credit.venue ? `<div class="cv-list-sub">${credit.venue}</div>` : ''}
+          </div>`).join('');
+      }
+
+      // Education items
+      const educationContent = document.querySelector('[data-content="education"] .cv-list');
+      if (educationContent && cv.tabs.education?.items) {
+        educationContent.innerHTML = cv.tabs.education.items.map(item => `
+          <div class="cv-list-item">
+            <div class="cv-list-main">
+              <span class="cv-year">${item.year}</span>
+              <strong>${item.name}</strong>
+            </div>
+            <div class="cv-list-sub">${item.institution}</div>
+          </div>`).join('');
+      }
+
+      // Download button
+      const downloadBtn = document.querySelector('.cv-download a');
+      if (downloadBtn) {
+        downloadBtn.textContent = cv.downloadLabel;
+        downloadBtn.href = cv.downloadUrl;
+      }
     }
 
     // Collapsible sections (mobile only)

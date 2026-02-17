@@ -14,35 +14,9 @@ hero:
 
 showreels:
   title: Showreels
-  reels:
-    - id: general
-      label: General Showreel
-      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-    - id: german
-      label: German Showreel
-      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-    - id: english
-      label: English Showreel
-      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-    - id: polish
-      label: Polish Showreel
-      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-    - id: commercial
-      label: Commercial Showreel
-      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-    - id: dramatic
-      label: Dramatic Showreel
-      embedUrl: "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
 
 gallery:
   title: Gallery
-  photos:
-    - src: "/media/headshots/01.jpg"
-      alt: "Matthias Salamon Headshot 1"
-    - src: "/media/headshots/02.jpg"
-      alt: "Matthias Salamon Headshot 2"
-    - src: "/media/headshots/03.jpg"
-      alt: "Matthias Salamon Headshot 3"
 
 cv:
   title: CV / Resume
@@ -236,7 +210,6 @@ cv:
 
 voiceover:
   title: Voice-Over Samples
-  description: Selected voice-over demos showcasing acting range
 
 contact:
   title: Get in Touch
@@ -245,9 +218,9 @@ contact:
   revealEmail: Click to reveal email
   revealPhone: Click to reveal phone
   agencyTitle: "Represented by:"
-  agencyName: "Agency Name"
-  agencyEmail: "agency@example.com"
-  agencyPhone: "+43 123 456 789"
+  agencyName: "Baumbauer Actors"
+  agencyEmail: "contact@baumbaueractors.com"
+  agencyPhone: "+49 151 24051834‬"
   formHeading: Contact Form
   form:
     name: Name *

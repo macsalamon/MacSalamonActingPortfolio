@@ -326,8 +326,9 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: var(--spacing-xl) var(--spacing-lg);
-  text-align: left;
+  text-align: center;
 }
 
 .hero-name {
@@ -666,6 +667,7 @@ nav a:hover {
 
 .casting-links {
   margin-top: calc(var(--spacing-lg) * 0.5);
+  margin-bottom: calc(var(--spacing-lg) * 0.5);
   text-align: center;
 }
 
@@ -939,4 +941,29 @@ footer {
     width: 100%;
     text-align: center;
   }
+}
+
+.voiceover-website-link {
+  margin-top: var(--spacing-md);
+  text-align: center;
+}
+
+.voiceover-website-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: linear-gradient(135deg, var(--color-gradient-light-from), var(--color-gradient-light-to));
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.voiceover-website-btn:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }

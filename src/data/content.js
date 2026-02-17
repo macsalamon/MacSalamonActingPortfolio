@@ -16,56 +16,10 @@ export const translations = {
       "intro": "Multilingual actor and voice talent based in Vienna, Austria"
     },
     "showreels": {
-      "title": "Showreels",
-      "reels": [
-        {
-          "id": "general",
-          "label": "General Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "german",
-          "label": "German Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "english",
-          "label": "English Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "polish",
-          "label": "Polish Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "commercial",
-          "label": "Commercial Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "dramatic",
-          "label": "Dramatic Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        }
-      ]
+      "title": "Showreels"
     },
     "gallery": {
-      "title": "Gallery",
-      "photos": [
-        {
-          "src": "/media/headshots/01.jpg",
-          "alt": "Matthias Salamon Headshot 1"
-        },
-        {
-          "src": "/media/headshots/02.jpg",
-          "alt": "Matthias Salamon Headshot 2"
-        },
-        {
-          "src": "/media/headshots/03.jpg",
-          "alt": "Matthias Salamon Headshot 3"
-        }
-      ]
+      "title": "Gallery"
     },
     "cv": {
       "title": "CV / Resume",
@@ -336,8 +290,7 @@ export const translations = {
       }
     },
     "voiceover": {
-      "title": "Voice-Over Samples",
-      "description": "Selected voice-over demos showcasing acting range"
+      "title": "Voice-Over Samples"
     },
     "contact": {
       "title": "Get in Touch",
@@ -346,9 +299,9 @@ export const translations = {
       "revealEmail": "Click to reveal email",
       "revealPhone": "Click to reveal phone",
       "agencyTitle": "Represented by:",
-      "agencyName": "Agency Name",
-      "agencyEmail": "agency@example.com",
-      "agencyPhone": "+43 123 456 789",
+      "agencyName": "Baumbauer Actors",
+      "agencyEmail": "contact@baumbaueractors.com",
+      "agencyPhone": "+49 151 24051834‬",
       "formHeading": "Contact Form",
       "form": {
         "name": "Name *",
@@ -401,60 +354,14 @@ export const translations = {
     },
     "hero": {
       "name": "Matthias Salamon",
-      "tagline": "Schauspieler & Sprecher",
-      "intro": "Mehrsprachiger Schauspieler und Sprecher in Wien, Österreich"
+      "tagline": "Schauspieler & Voice-Over-Künstler",
+      "intro": "Mehrsprachiger Schauspieler und Sprecher mit Sitz in Wien, Österreich"
     },
     "showreels": {
-      "title": "Showreels",
-      "reels": [
-        {
-          "id": "general",
-          "label": "Allgemeines Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "german",
-          "label": "Deutsches Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "english",
-          "label": "Englisches Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "polish",
-          "label": "Polnisches Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "commercial",
-          "label": "Werbe-Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "dramatic",
-          "label": "Dramatisches Showreel",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        }
-      ]
+      "title": "Showreels"
     },
     "gallery": {
-      "title": "Galerie",
-      "photos": [
-        {
-          "src": "/media/headshots/01.jpg",
-          "alt": "Matthias Salamon Headshot 1"
-        },
-        {
-          "src": "/media/headshots/02.jpg",
-          "alt": "Matthias Salamon Headshot 2"
-        },
-        {
-          "src": "/media/headshots/03.jpg",
-          "alt": "Matthias Salamon Headshot 3"
-        }
-      ]
+      "title": "Galerie"
     },
     "cv": {
       "title": "Lebenslauf",
@@ -463,12 +370,12 @@ export const translations = {
       "tabs": {
         "general": {
           "title": "Allgemeine Infos",
-          "languages": "Muttersprachen: Deutsch, Polnisch | Fließend: Englisch | Grundlagen: Russisch, Französisch",
+          "languages": "Muttersprachen: Deutsch, Polnisch | Fließend: Englisch | Grundkenntnisse: Russisch, Französisch",
           "height": "Größe: 180 cm",
           "eyes": "Augen: Blaugrau",
-          "hair": "Haarfarbe: Dunkelblond",
-          "voiceType": "Gesangsstimmlage: Bariton",
-          "skills": "Gesang (Professionell) - Rock, Musical, Klassik | Fechten | Schwertkampf | Schwimmen | Gitarre (Grundlagen) | PKW Führerschein"
+          "hair": "Haare: Dunkelblond",
+          "voiceType": "Stimmfach: Bariton",
+          "skills": "Gesang (Professionell) – Rock, Musical, Klassik | Fechten | Schwertkampf | Schwimmen | Gitarre (Grundkenntnisse) | Führerschein"
         },
         "filmtv": {
           "title": "Film / TV",
@@ -477,119 +384,119 @@ export const translations = {
               "role": "Gerald",
               "project": "Pupin",
               "year": "2025",
-              "director": "Regie: Danilo Beckovic",
+              "director": "Reg: Danilo Beckovic",
               "production": "Mali Budo"
             },
             {
               "role": "Rainer",
               "project": "Anywhere",
               "year": "2024",
-              "director": "Regie: Felix Binder",
+              "director": "Reg: Felix Binder",
               "production": "Gaumont/Paramount"
             },
             {
               "role": "Taxifahrer",
               "project": "The Cum-Ex Files",
               "year": "2024",
-              "director": "Regie: Dustin Loose",
+              "director": "Reg: Dustin Loose",
               "production": "X-Filme Creativpool"
             },
             {
               "role": "Emil Bednarek (Angeklagter 18)",
               "project": "Die Ermittlung",
               "year": "2023",
-              "director": "Regie: RP Kahl",
+              "director": "Reg: RP Kahl",
               "production": "Die Ermittlung Verfilmung UG"
             },
             {
               "role": "Viktor",
               "project": "The Tattoist of Auschwitz",
               "year": "2023",
-              "director": "Regie: Tali Shalom-Ezer",
+              "director": "Reg: Tali Shalom-Ezer",
               "production": "Peacock / Sky TV"
             },
             {
               "role": "Roman Nowak",
               "project": "Nord bei Nordwest - Wilde Hunde",
               "year": "2021",
-              "director": "Regie: Christiane Balthasar",
+              "director": "Reg: Christiane Balthasar",
               "production": "Triplepictures / NDR / Degeto"
             },
             {
               "role": "Evgenij Bordacuk",
               "project": "SOKO Donau - Der gschupfte Ferdl",
               "year": "2021",
-              "director": "Regie: Sophie Allet-Coche",
+              "director": "Reg: Sophie Allet-Coche",
               "production": "SATEL Film, Wien"
             },
             {
               "role": "Dalibor Coric",
               "project": "SOKO Kitzbühel - Flucht",
               "year": "2020",
-              "director": "Regie: Gerald Liegel",
+              "director": "Reg: Gerald Liegel",
               "production": "Gebhardt Productions / ORF / ZDF"
             },
             {
               "role": "Pete Kozka",
               "project": "Der Club der singenden Metzger",
               "year": "2019",
-              "director": "Regie: Uli Edel",
+              "director": "Reg: Uli Edel",
               "production": "Constantin Film / ARD"
             },
             {
               "role": "Staatsanwalt Zwieczosbirski",
               "project": "Polizeiruf 110 - Der Fall Sikorska",
               "year": "2019",
-              "director": "Regie: Stefan Kornatz",
+              "director": "Reg: Stefan Kornatz",
               "production": "23/5 Filmproduktion, Berlin"
             },
             {
               "role": "Petr Tovarek",
               "project": "SOKO Kitzbühel - Unten",
               "year": "2018",
-              "director": "Regie: Claudia Jüptner",
+              "director": "Reg: Claudia Jüptner",
               "production": "Gebhardt Productions / ORF / ZDF"
             },
             {
               "role": "Ariel Koslowsky",
               "project": "Murer – Anatomie eines Prozesses",
               "year": "2018",
-              "director": "Regie: Christian Frosch",
+              "director": "Reg: Christian Frosch",
               "production": "Prisma Film, Wien / Luxemburg"
             },
             {
               "role": "Dario",
               "project": "Vollblut / Gestüt Hochstetten",
               "year": "2018",
-              "director": "Regie: Andreas Herzog / Christopher Schier",
+              "director": "Reg: Andreas Herzog / Christopher Schier",
               "production": "SamFilm / Servus TV"
             },
             {
               "role": "Lukasz",
               "project": "Usedom Krimi - Trugspur",
               "year": "2017",
-              "director": "Regie: Jochen Alexander Freydank",
+              "director": "Reg: Jochen Alexander Freydank",
               "production": "Polyphon Film & Fernseh GmbH, Berlin"
             },
             {
               "role": "Peter Buschke",
               "project": "Polizeiruf 110 - Angst heiligt die Mittel",
               "year": "2016",
-              "director": "Regie: Christian von Castelberg",
+              "director": "Reg: Christian von Castelberg",
               "production": "Filmpool Fiction, HH"
             },
             {
-              "role": "Pfarrer Kasimir",
+              "role": "Pater Kasimir",
               "project": "Landkrimi - Der Tote am Teich",
               "year": "2015",
-              "director": "Regie: Nicolas Leytner",
+              "director": "Reg: Nicolas Leytner",
               "production": "Lotusfilm, Wien"
             },
             {
               "role": "Bolek",
               "project": "4 Frauen und ein Todesfall",
               "year": "2014",
-              "director": "Regie: Wolfgang Murnberger",
+              "director": "Reg: Wolfgang Murnberger",
               "production": "DOR-Film, Wien"
             }
           ]
@@ -607,11 +514,11 @@ export const translations = {
               "role": "Ramon de la Vega",
               "project": "Zorro",
               "year": "2020",
-              "venue": "Visp (CH)"
+              "venue": "Visp (Schweiz)"
             },
             {
               "role": "Ensemble / Cover Chagal",
-              "project": "Tanz der Vampire",
+              "project": "Dance of the Vampires",
               "year": "2018",
               "venue": "Etablissement Ronacher, Wien"
             },
@@ -619,47 +526,47 @@ export const translations = {
               "role": "Professor",
               "project": "Hinter der Tür",
               "year": "2017",
-              "director": "Regie: András Léner",
+              "director": "Reg: András Léner",
               "venue": "Theater Brett, Wien"
             },
             {
               "role": "Teufel",
               "project": "Everyman (Jedermann)",
               "year": "2015/16",
-              "director": "Regie: Johannes Reitmeier",
+              "director": "Reg: Johannes Reitmeier",
               "venue": "Pfalztheater Kaiserslautern"
             },
             {
-              "role": "Dicker Vetter",
+              "role": "Reicher Vetter",
               "project": "Jedermann – die Rockoper",
               "year": "2014",
-              "director": "Regie: Peter Lund",
+              "director": "Reg: Peter Lund",
               "venue": "Domstufenfestspiele Erfurt"
             },
             {
               "role": "Generalvikar Staupitz",
               "project": "Luther! Rebell wider Willen",
               "year": "2013",
-              "director": "Regie: Tatjana Rese",
+              "director": "Reg: Tatjana Rese",
               "venue": "Landestheater Eisenach"
             },
             {
               "role": "Graf Dracul",
               "project": "Die Chronik der Unsterblichen - Blutnacht",
               "year": "2012",
-              "director": "Regie: Urs Häberli",
+              "director": "Reg: Urs Häberli",
               "venue": "Pfalztheater, Kaiserslautern"
             },
             {
               "role": "Bap",
               "project": "We Will Rock You",
               "year": "2011 & 2006-2008",
-              "director": "Regie: Ben Elton",
+              "director": "Reg: Ben Elton",
               "venue": "Theater 11, Zürich / Raimund Theater, Wien / Theater des Westens, Berlin"
             },
             {
               "role": "Swing / 2. Prof. Abronsius / 2. Chagal, Cover Nightmare solo",
-              "project": "Tanz der Vampire",
+              "project": "Dance of the Vampires",
               "year": "2008-2010",
               "venue": "Metronom Theater, Oberhausen / Palladium Theater, Stuttgart"
             },
@@ -667,42 +574,42 @@ export const translations = {
               "role": "Emil Perthes / 2. Conrad Meyer",
               "project": "Heidi das Musical",
               "year": "2007",
-              "director": "Regie: Stefan Huber",
+              "director": "Reg: Stefan Huber",
               "venue": "Seebühne Wallenstadt"
             },
             {
               "role": "Cover Kashoggi / Bap / J.B. / Dieter",
               "project": "We Will Rock You",
               "year": "2006",
-              "director": "Regie: Ben Elton",
-              "venue": "Musicaldome Köln"
+              "director": "Reg: Ben Elton",
+              "venue": "Musicaldome Cologne"
             },
             {
               "role": "Swing / 2. Duran",
               "project": "Barbarella",
               "year": "2004",
-              "director": "Regie: Kim Duddy",
+              "director": "Reg: Kim Duddy",
               "venue": "Raimundtheater, Wien"
             },
             {
               "role": "Action / 2. Riff",
               "project": "West Side Story",
               "year": "2003/04",
-              "director": "Regie: Francesca Zambello",
+              "director": "Reg: Francesca Zambello",
               "venue": "Seefestspiele Bregenz"
             },
             {
               "role": "Tobias Ragg",
               "project": "Sweeney Todd",
               "year": "2000",
-              "director": "Regie: Josef E. Köpplinger",
+              "director": "Reg: Josef E. Köpplinger",
               "venue": "Theater Akzent, Wien"
             },
             {
               "role": "A-Rab",
               "project": "West Side Story",
               "year": "1999/2000",
-              "director": "Regie: Stefan Huber",
+              "director": "Reg: Stefan Huber",
               "venue": "Staatstheater Mainz / Stadttheater Bern"
             }
           ]
@@ -711,12 +618,12 @@ export const translations = {
           "title": "Ausbildung / Fähigkeiten",
           "items": [
             {
-              "name": "Studium Schauspiel und Gesang",
-              "institution": "Staatliche Schule für Schauspiel und Gesang, Gdynia",
+              "name": "Schauspiel- und Gesangsstudium",
+              "institution": "Staatliche Schauspiel- und Gesangsschule, Gdynia",
               "year": "1995-1998"
             },
             {
-              "name": "Abschluss als Musicaldarsteller",
+              "name": "Musical-Theatre-Abschluss",
               "institution": "Stella-Academy, Hamburg",
               "year": "1998-2000"
             }
@@ -725,25 +632,24 @@ export const translations = {
       }
     },
     "voiceover": {
-      "title": "Voice-Over Demos",
-      "description": "Ausgewählte Sprechproben mit schauspielerischem Ausdruck"
+      "title": "Voice-Over-Hörproben"
     },
     "contact": {
-      "title": "Kontakt",
+      "title": "Kontakt aufnehmen",
       "emailLabel": "E-Mail:",
       "phoneLabel": "Telefon:",
-      "revealEmail": "Klicken Sie, um E-Mail anzuzeigen",
-      "revealPhone": "Klicken Sie, um Telefon anzuzeigen",
+      "revealEmail": "Klicken zum Anzeigen der E-Mail",
+      "revealPhone": "Klicken zum Anzeigen der Telefonnummer",
       "agencyTitle": "Vertreten durch:",
-      "agencyName": "Agentur Name",
-      "agencyEmail": "agentur@beispiel.de",
-      "agencyPhone": "+43 123 456 789",
+      "agencyName": "Baumbauer Actors",
+      "agencyEmail": "contact@baumbaueractors.com",
+      "agencyPhone": "+49 151 24051834",
       "formHeading": "Kontaktformular",
       "form": {
         "name": "Name *",
         "emailLabel": "E-Mail *",
         "message": "Nachricht *",
-        "consent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten (Name, E-Mail, Nachricht) zum Zweck der Beantwortung meiner Anfrage zu. Ihre Daten werden nicht an Dritte weitergegeben. Siehe unsere <a href=\"/privacy\" target=\"_blank\">Datenschutzerklärung</a> für Details. *",
+        "consent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten (Name, E-Mail, Nachricht) zum Zweck der Beantwortung meiner Anfrage zu. Ihre Daten werden nicht an Dritte weitergegeben. Weitere Informationen finden Sie in unserer <a href=\"/privacy\" target=\"_blank\">Datenschutzerklärung</a>. *",
         "send": "Nachricht senden",
         "sending": "Wird gesendet..."
       },
@@ -755,8 +661,8 @@ export const translations = {
         "noTurnstile": "Bitte schließen Sie die Sicherheitsüberprüfung ab."
       },
       "messages": {
-        "success": "Vielen Dank für Ihre Nachricht! Ich melde mich bald bei Ihnen.",
-        "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt."
+        "success": "Vielen Dank für Ihre Nachricht! Ich melde mich in Kürze bei Ihnen.",
+        "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie mich direkt."
       },
       "castingProfiles": "Casting-Profile",
       "profiles": [
@@ -777,86 +683,41 @@ export const translations = {
     "footer": {
       "copyright": "© 2025 Matthias Salamon. Alle Rechte vorbehalten.",
       "legal": "Impressum",
-      "privacy": "Datenschutz"
+      "privacy": "Datenschutzerklärung"
     }
   },
   "pl": {
     "nav": {
       "showreels": "SHOWREELE",
       "gallery": "GALERIA",
-      "cv": "CV",
-      "voiceover": "LEKTORING",
+      "cv": "CV / ŻYCIORYS",
+      "voiceover": "VOICE-OVER",
       "contact": "KONTAKT"
     },
     "hero": {
-      "name": "Maciej Salamon",
-      "tagline": "Aktor & Lektor",
-      "intro": "Wielojęzyczny aktor i lektor w Wiedniu, Austria"
+      "name": "Matthias Salamon",
+      "tagline": "Aktor & Artysta Voice-Over",
+      "intro": "Wielojęzyczny aktor i lektor mieszkający w Wiedniu, Austria"
     },
     "showreels": {
-      "title": "Showreele",
-      "reels": [
-        {
-          "id": "general",
-          "label": "Showreel Ogólny",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "german",
-          "label": "Showreel Niemiecki",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "english",
-          "label": "Showreel Angielski",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "polish",
-          "label": "Showreel Polski",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "commercial",
-          "label": "Showreel Reklamowy",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        },
-        {
-          "id": "dramatic",
-          "label": "Showreel Dramatyczny",
-          "embedUrl": "https://www.filmmakers.eu/de/actors/matthias-salamon/video/106897?autoplay=false&background_color=none&iframe=v2&playlist=h"
-        }
-      ]
+      "title": "Showreele"
     },
     "gallery": {
-      "title": "Galeria",
-      "photos": [
-        {
-          "src": "/media/headshots/01.jpg",
-          "alt": "Maciej Salamon Zdjęcie 1"
-        },
-        {
-          "src": "/media/headshots/02.jpg",
-          "alt": "Maciej Salamon Zdjęcie 2"
-        },
-        {
-          "src": "/media/headshots/03.jpg",
-          "alt": "Maciej Salamon Zdjęcie 3"
-        }
-      ]
+      "title": "Galeria"
     },
     "cv": {
-      "title": "CV",
+      "title": "CV / Życiorys",
       "downloadLabel": "Pobierz pełne CV (PDF)",
       "downloadUrl": "/media/cv/Maciej_Salamon_artistic_CV_2026.pdf",
       "tabs": {
         "general": {
-          "title": "Informacje Ogólne",
-          "languages": "Języki: Polski (ojczysty), Niemiecki (ojczysty), Angielski (biegły), Rosyjski (podstawowy), Francuski (podstawowy)",
+          "title": "Informacje ogólne",
+          "languages": "Języki ojczyste: niemiecki, polski | Biegły: angielski | Podstawowy: rosyjski, francuski",
           "height": "Wzrost: 180 cm",
-          "build": "Budowa: Atletyczna",
-          "voiceType": "Rodzaj głosu: Baryton",
-          "skills": "Umiejętności: Walka sceniczna, Teatr muzyczny, Lektoring, Akcenty (polski, niemiecki)"
+          "eyes": "Oczy: niebiesko-szare",
+          "hair": "Włosy: ciemny blond",
+          "voiceType": "Głos: baryton",
+          "skills": "Śpiew (profesjonalny) – rock, musical, klasyczny | Szermierka | Walka na miecze | Pływanie | Gitara (podstawy) | Prawo jazdy"
         },
         "filmtv": {
           "title": "Film / TV",
@@ -867,6 +728,118 @@ export const translations = {
               "year": "2025",
               "director": "Reż: Danilo Beckovic",
               "production": "Mali Budo"
+            },
+            {
+              "role": "Rainer",
+              "project": "Anywhere",
+              "year": "2024",
+              "director": "Reż: Felix Binder",
+              "production": "Gaumont/Paramount"
+            },
+            {
+              "role": "Taksówkarz",
+              "project": "The Cum-Ex Files",
+              "year": "2024",
+              "director": "Reż: Dustin Loose",
+              "production": "X-Filme Creativpool"
+            },
+            {
+              "role": "Emil Bednarek (Oskarżony 18)",
+              "project": "Die Ermittlung",
+              "year": "2023",
+              "director": "Reż: RP Kahl",
+              "production": "Die Ermittlung Verfilmung UG"
+            },
+            {
+              "role": "Viktor",
+              "project": "The Tattoist of Auschwitz",
+              "year": "2023",
+              "director": "Reż: Tali Shalom-Ezer",
+              "production": "Peacock / Sky TV"
+            },
+            {
+              "role": "Roman Nowak",
+              "project": "Nord bei Nordwest - Wilde Hunde",
+              "year": "2021",
+              "director": "Reż: Christiane Balthasar",
+              "production": "Triplepictures / NDR / Degeto"
+            },
+            {
+              "role": "Evgenij Bordacuk",
+              "project": "SOKO Donau - Der gschupfte Ferdl",
+              "year": "2021",
+              "director": "Reż: Sophie Allet-Coche",
+              "production": "SATEL Film, Wien"
+            },
+            {
+              "role": "Dalibor Coric",
+              "project": "SOKO Kitzbühel - Flucht",
+              "year": "2020",
+              "director": "Reż: Gerald Liegel",
+              "production": "Gebhardt Productions / ORF / ZDF"
+            },
+            {
+              "role": "Pete Kozka",
+              "project": "Der Club der singenden Metzger",
+              "year": "2019",
+              "director": "Reż: Uli Edel",
+              "production": "Constantin Film / ARD"
+            },
+            {
+              "role": "Prokurator Zwieczosbirski",
+              "project": "Polizeiruf 110 - Der Fall Sikorska",
+              "year": "2019",
+              "director": "Reż: Stefan Kornatz",
+              "production": "23/5 Filmproduktion, Berlin"
+            },
+            {
+              "role": "Petr Tovarek",
+              "project": "SOKO Kitzbühel - Unten",
+              "year": "2018",
+              "director": "Reż: Claudia Jüptner",
+              "production": "Gebhardt Productions / ORF / ZDF"
+            },
+            {
+              "role": "Ariel Koslowsky",
+              "project": "Murer – Anatomie eines Prozesses",
+              "year": "2018",
+              "director": "Reż: Christian Frosch",
+              "production": "Prisma Film, Wien / Luxemburg"
+            },
+            {
+              "role": "Dario",
+              "project": "Vollblut / Gestüt Hochstetten",
+              "year": "2018",
+              "director": "Reż: Andreas Herzog / Christopher Schier",
+              "production": "SamFilm / Servus TV"
+            },
+            {
+              "role": "Lukasz",
+              "project": "Usedom Krimi - Trugspur",
+              "year": "2017",
+              "director": "Reż: Jochen Alexander Freydank",
+              "production": "Polyphon Film & Fernseh GmbH, Berlin"
+            },
+            {
+              "role": "Peter Buschke",
+              "project": "Polizeiruf 110 - Angst heiligt die Mittel",
+              "year": "2016",
+              "director": "Reż: Christian von Castelberg",
+              "production": "Filmpool Fiction, HH"
+            },
+            {
+              "role": "Ojciec Kasimir",
+              "project": "Landkrimi - Der Tote am Teich",
+              "year": "2015",
+              "director": "Reż: Nicolas Leytner",
+              "production": "Lotusfilm, Wien"
+            },
+            {
+              "role": "Bolek",
+              "project": "4 Frauen und ein Todesfall",
+              "year": "2014",
+              "director": "Reż: Wolfgang Murnberger",
+              "production": "DOR-Film, Wien"
             }
           ]
         },
@@ -874,65 +847,160 @@ export const translations = {
           "title": "Teatr / Musicale",
           "credits": [
             {
-              "role": "Doc",
-              "project": "We Will Rock You",
-              "year": "2010-2012",
-              "director": "Reżyser"
+              "role": "Ramon de la Vega",
+              "project": "Zorro",
+              "year": "2024",
+              "venue": "Stadttheater Hof"
             },
             {
-              "role": "Profesor Abronsius",
-              "project": "Taniec Wampirów",
+              "role": "Ramon de la Vega",
+              "project": "Zorro",
+              "year": "2020",
+              "venue": "Visp (Szwajcaria)"
+            },
+            {
+              "role": "Ensemble / Cover Chagal",
+              "project": "Dance of the Vampires",
+              "year": "2018",
+              "venue": "Etablissement Ronacher, Wiedeń"
+            },
+            {
+              "role": "Profesor",
+              "project": "Hinter der Tür",
+              "year": "2017",
+              "director": "Reż: András Léner",
+              "venue": "Theater Brett, Wiedeń"
+            },
+            {
+              "role": "Diabeł",
+              "project": "Everyman (Jedermann)",
+              "year": "2015/16",
+              "director": "Reż: Johannes Reitmeier",
+              "venue": "Pfalztheater Kaiserslautern"
+            },
+            {
+              "role": "Bogaty Kuzyn",
+              "project": "Jedermann – die Rockoper",
+              "year": "2014",
+              "director": "Reż: Peter Lund",
+              "venue": "Domstufenfestspiele Erfurt"
+            },
+            {
+              "role": "Wikariusz Generalny Staupitz",
+              "project": "Luther! Rebell wider Willen",
+              "year": "2013",
+              "director": "Reż: Tatjana Rese",
+              "venue": "Landestheater Eisenach"
+            },
+            {
+              "role": "Hrabia Dracul",
+              "project": "Die Chronik der Unsterblichen - Blutnacht",
+              "year": "2012",
+              "director": "Reż: Urs Häberli",
+              "venue": "Pfalztheater, Kaiserslautern"
+            },
+            {
+              "role": "Bap",
+              "project": "We Will Rock You",
+              "year": "2011 & 2006-2008",
+              "director": "Reż: Ben Elton",
+              "venue": "Theater 11, Zurych / Raimund Theater, Wiedeń / Theater des Westens, Berlin"
+            },
+            {
+              "role": "Swing / 2. Prof. Abronsius / 2. Chagal, Cover Nightmare solo",
+              "project": "Dance of the Vampires",
               "year": "2008-2010",
-              "director": "Reżyser"
+              "venue": "Metronom Theater, Oberhausen / Palladium Theater, Stuttgart"
+            },
+            {
+              "role": "Emil Perthes / 2. Conrad Meyer",
+              "project": "Heidi das Musical",
+              "year": "2007",
+              "director": "Reż: Stefan Huber",
+              "venue": "Seebühne Wallenstadt"
+            },
+            {
+              "role": "Cover Kashoggi / Bap / J.B. / Dieter",
+              "project": "We Will Rock You",
+              "year": "2006",
+              "director": "Reż: Ben Elton",
+              "venue": "Musicaldome Cologne"
+            },
+            {
+              "role": "Swing / 2. Duran",
+              "project": "Barbarella",
+              "year": "2004",
+              "director": "Reż: Kim Duddy",
+              "venue": "Raimundtheater, Wiedeń"
+            },
+            {
+              "role": "Action / 2. Riff",
+              "project": "West Side Story",
+              "year": "2003/04",
+              "director": "Reż: Francesca Zambello",
+              "venue": "Seefestspiele Bregenz"
+            },
+            {
+              "role": "Tobias Ragg",
+              "project": "Sweeney Todd",
+              "year": "2000",
+              "director": "Reż: Josef E. Köpplinger",
+              "venue": "Theater Akzent, Wiedeń"
+            },
+            {
+              "role": "A-Rab",
+              "project": "West Side Story",
+              "year": "1999/2000",
+              "director": "Reż: Stefan Huber",
+              "venue": "Staatstheater Mainz / Stadttheater Bern"
             }
           ]
         },
         "education": {
-          "title": "Edukacja / Warsztaty / Umiejętności",
+          "title": "Wykształcenie / Umiejętności",
           "items": [
             {
-              "name": "Szkolenie teatru muzycznego",
-              "institution": "Nazwa szkoły",
-              "year": "2000-2004"
+              "name": "Studia aktorskie i wokalne",
+              "institution": "Państwowa Szkoła Aktorska i Wokalna, Gdynia",
+              "year": "1995-1998"
             },
             {
-              "name": "Warsztat aktorski",
-              "institution": "Nazwa warsztatu",
-              "year": "2023"
+              "name": "Dyplom Musical Theatre",
+              "institution": "Stella-Academy, Hamburg",
+              "year": "1998-2000"
             }
           ]
         }
       }
     },
     "voiceover": {
-      "title": "Próbki Lektorskie",
-      "description": "Wybrane demo lektorskie pokazujące zakres aktorski"
+      "title": "Próbki Voice-Over"
     },
     "contact": {
-      "title": "Kontakt",
+      "title": "Skontaktuj się",
       "emailLabel": "E-mail:",
       "phoneLabel": "Telefon:",
-      "revealEmail": "Kliknij, aby odsłonić e-mail",
-      "revealPhone": "Kliknij, aby odsłonić telefon",
+      "revealEmail": "Kliknij, aby wyświetlić e-mail",
+      "revealPhone": "Kliknij, aby wyświetlić numer telefonu",
       "agencyTitle": "Reprezentowany przez:",
-      "agencyName": "Nazwa Agencji",
-      "agencyEmail": "agencja@przyklad.pl",
-      "agencyPhone": "+43 123 456 789",
+      "agencyName": "Baumbauer Actors",
+      "agencyEmail": "contact@baumbaueractors.com",
+      "agencyPhone": "+49 151 24051834",
       "formHeading": "Formularz kontaktowy",
       "form": {
-        "name": "Imię *",
+        "name": "Imię i nazwisko *",
         "emailLabel": "E-mail *",
         "message": "Wiadomość *",
-        "consent": "Zgadzam się na przetwarzanie moich danych osobowych (imię, e-mail, wiadomość) w celu odpowiedzi na moje zapytanie. Twoje dane nie będą udostępniane osobom trzecim. Zobacz naszą <a href=\"/privacy\" target=\"_blank\">Politykę Prywatności</a> po szczegóły. *",
+        "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych (imię i nazwisko, e-mail, wiadomość) w celu udzielenia odpowiedzi na moje zapytanie. Dane nie będą udostępniane osobom trzecim. Szczegóły znajdziesz w naszej <a href=\"/privacy\" target=\"_blank\">Polityce prywatności</a>. *",
         "send": "Wyślij wiadomość",
         "sending": "Wysyłanie..."
       },
       "validation": {
-        "honeypot": "Przesłanie nie powiodło się. Spróbuj ponownie.",
+        "honeypot": "Przesyłanie nie powiodło się. Spróbuj ponownie.",
         "required": "Proszę wypełnić wszystkie wymagane pola.",
         "invalidEmail": "Proszę podać prawidłowy adres e-mail.",
         "noConsent": "Proszę zaakceptować politykę prywatności, aby kontynuować.",
-        "noTurnstile": "Proszę ukończyć sprawdzanie bezpieczeństwa."
+        "noTurnstile": "Proszę ukończyć weryfikację bezpieczeństwa."
       },
       "messages": {
         "success": "Dziękuję za wiadomość! Odezwę się wkrótce.",
@@ -955,7 +1023,7 @@ export const translations = {
       ]
     },
     "footer": {
-      "copyright": "© 2025 Maciej Salamon. Wszelkie prawa zastrzeżone.",
+      "copyright": "© 2025 Matthias Salamon. Wszelkie prawa zastrzeżone.",
       "legal": "Nota prawna",
       "privacy": "Polityka prywatności"
     }
