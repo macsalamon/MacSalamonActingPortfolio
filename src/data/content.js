@@ -7,7 +7,6 @@ export const translations = {
       "showreels": "SHOWREELS",
       "gallery": "GALLERY",
       "cv": "CV / RESUME",
-      "about": "ABOUT",
       "voiceover": "VOICE-OVER",
       "contact": "CONTACT"
     },
@@ -71,7 +70,7 @@ export const translations = {
     "cv": {
       "title": "CV / Resume",
       "downloadLabel": "Download Full CV (PDF)",
-      "downloadUrl": "/media/cv/Maciej-Salamon-CV-2025.pdf",
+      "downloadUrl": "/media/cv/Maciej_Salamon_artistic_CV_2026.pdf",
       "tabs": {
         "general": {
           "title": "General Info",
@@ -85,6 +84,13 @@ export const translations = {
         "filmtv": {
           "title": "Film / TV",
           "credits": [
+            {
+              "role": "Gerald",
+              "project": "Pupin",
+              "year": "2025",
+              "director": "Dir: Danilo Beckovic",
+              "production": "Mali Budo"
+            },
             {
               "role": "Rainer",
               "project": "Anywhere",
@@ -329,12 +335,6 @@ export const translations = {
         }
       }
     },
-    "about": {
-      "title": "About Matthias",
-      "subtitle": "Actor, Voice Talent & Producer",
-      "bio1": "<p>Your bio content will go here...</p>",
-      "bio2": "<p>More bio content...</p>"
-    },
     "voiceover": {
       "title": "Voice-Over Samples",
       "description": "Selected voice-over demos showcasing acting range"
@@ -396,7 +396,6 @@ export const translations = {
       "showreels": "SHOWREELS",
       "gallery": "GALERIE",
       "cv": "LEBENSLAUF",
-      "about": "ÜBER MICH",
       "voiceover": "VOICE-OVER",
       "contact": "KONTAKT"
     },
@@ -460,7 +459,7 @@ export const translations = {
     "cv": {
       "title": "Lebenslauf",
       "downloadLabel": "Vollständigen Lebenslauf herunterladen (PDF)",
-      "downloadUrl": "/media/cv/Maciej-Salamon-CV-2025.pdf",
+      "downloadUrl": "/media/cv/Maciej_Salamon_artistic_CV_2026.pdf",
       "tabs": {
         "general": {
           "title": "Allgemeine Infos",
@@ -474,6 +473,13 @@ export const translations = {
         "filmtv": {
           "title": "Film / TV",
           "credits": [
+            {
+              "role": "Gerald",
+              "project": "Pupin",
+              "year": "2025",
+              "director": "Regie: Danilo Beckovic",
+              "production": "Mali Budo"
+            },
             {
               "role": "Rainer",
               "project": "Anywhere",
@@ -718,12 +724,6 @@ export const translations = {
         }
       }
     },
-    "about": {
-      "title": "Über Matthias",
-      "subtitle": "Schauspieler, Sprecher & Produzent",
-      "bio1": "<p>Ihr Bio-Inhalt kommt hierher...</p>",
-      "bio2": "<p>Mehr Bio-Inhalt...</p>"
-    },
     "voiceover": {
       "title": "Voice-Over Demos",
       "description": "Ausgewählte Sprechproben mit schauspielerischem Ausdruck"
@@ -785,7 +785,6 @@ export const translations = {
       "showreels": "SHOWREELE",
       "gallery": "GALERIA",
       "cv": "CV",
-      "about": "O MNIE",
       "voiceover": "LEKTORING",
       "contact": "KONTAKT"
     },
@@ -849,7 +848,7 @@ export const translations = {
     "cv": {
       "title": "CV",
       "downloadLabel": "Pobierz pełne CV (PDF)",
-      "downloadUrl": "/media/cv/Maciej-Salamon-CV.pdf",
+      "downloadUrl": "/media/cv/Maciej_Salamon_artistic_CV_2026.pdf",
       "tabs": {
         "general": {
           "title": "Informacje Ogólne",
@@ -863,10 +862,11 @@ export const translations = {
           "title": "Film / TV",
           "credits": [
             {
-              "role": "Rola główna",
-              "project": "Tytuł filmu",
-              "year": "2023",
-              "director": "Reżyser"
+              "role": "Gerald",
+              "project": "Pupin",
+              "year": "2025",
+              "director": "Reż: Danilo Beckovic",
+              "production": "Mali Budo"
             }
           ]
         },
@@ -903,12 +903,6 @@ export const translations = {
           ]
         }
       }
-    },
-    "about": {
-      "title": "O Macieju",
-      "subtitle": "Aktor, Lektor & Producent",
-      "bio1": "<p>Twoja treść biografii tutaj...</p>",
-      "bio2": "<p>Więcej treści biografii...</p>"
     },
     "voiceover": {
       "title": "Próbki Lektorskie",

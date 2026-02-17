@@ -4,7 +4,6 @@ nav:
   showreels: SHOWREELE
   gallery: GALERIA
   cv: CV
-  about: O MNIE
   voiceover: LEKTORING
   contact: KONTAKT
 
@@ -48,7 +47,7 @@ gallery:
 cv:
   title: CV
   downloadLabel: "Pobierz pełne CV (PDF)"
-  downloadUrl: "/media/cv/Maciej-Salamon-CV.pdf"
+  downloadUrl: "/media/cv/Maciej_Salamon_artistic_CV_2026.pdf"
   tabs:
     general:
       title: Informacje Ogólne
@@ -60,10 +59,11 @@ cv:
     filmtv:
       title: Film / TV
       credits:
-        - role: "Rola główna"
-          project: "Tytuł filmu"
-          year: "2023"
-          director: "Reżyser"
+        - role: "Gerald"
+          project: "Pupin"
+          year: "2025"
+          director: "Reż: Danilo Beckovic"
+          production: "Mali Budo"
     theatre:
       title: Teatr / Musicale
       credits:
@@ -84,12 +84,6 @@ cv:
         - name: "Warsztat aktorski"
           institution: "Nazwa warsztatu"
           year: "2023"
-
-about:
-  title: O Macieju
-  subtitle: Aktor, Lektor & Producent
-  bio1: "<p>Twoja treść biografii tutaj...</p>"
-  bio2: "<p>Więcej treści biografii...</p>"
 
 voiceover:
   title: Próbki Lektorskie

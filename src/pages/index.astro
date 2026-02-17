@@ -46,7 +46,6 @@ const t = translations[currentLang];
             <li><a href="#showreels">{t.nav.showreels}</a></li>
             <li><a href="#gallery">{t.nav.gallery}</a></li>
             <li><a href="#cv">{t.nav.cv}</a></li>
-            <li><a href="#about">{t.nav.about}</a></li>
             <li><a href="#voiceover">{t.nav.voiceover}</a></li>
             <li><a href="#contact">{t.nav.contact}</a></li>
             <li>
@@ -122,24 +121,6 @@ const t = translations[currentLang];
         </div>
         <div class="section-content" data-content="cv">
           <CVTabs translations={translations} currentLang={currentLang} />
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section section-alt collapsible-section" id="about">
-      <div class="container">
-        <div class="section-header" data-section="about">
-          <span class="toggle-icon">+</span>
-          <h2>{t.about.title}</h2>
-          <span class="toggle-icon">+</span>
-        </div>
-        <div class="section-content" data-content="about">
-          <div class="about-content">
-            <h3 class="about-subtitle">{t.about.subtitle}</h3>
-            <div class="mb-md" set:html={t.about.bio1}></div>
-            <div class="mb-md" set:html={t.about.bio2}></div>
-          </div>
         </div>
       </div>
     </section>
@@ -294,9 +275,8 @@ const t = translations[currentLang];
       if (navLinks[0]) navLinks[0].textContent = t.nav.showreels;
       if (navLinks[1]) navLinks[1].textContent = t.nav.gallery;
       if (navLinks[2]) navLinks[2].textContent = t.nav.cv;
-      if (navLinks[3]) navLinks[3].textContent = t.nav.about;
-      if (navLinks[4]) navLinks[4].textContent = t.nav.voiceover;
-      if (navLinks[5]) navLinks[5].textContent = t.nav.contact;
+      if (navLinks[3]) navLinks[3].textContent = t.nav.voiceover;
+      if (navLinks[4]) navLinks[4].textContent = t.nav.contact;
 
       // Hero
       const heroName = document.querySelector('.hero-name');
@@ -315,9 +295,6 @@ const t = translations[currentLang];
 
       const cvHeader = document.querySelector('[data-section="cv"] h2');
       if (cvHeader) cvHeader.textContent = t.cv.title;
-
-      const aboutHeader = document.querySelector('[data-section="about"] h2');
-      if (aboutHeader) aboutHeader.textContent = t.about.title;
 
       const voiceoverHeader = document.querySelector('[data-section="voiceover"] h2');
       if (voiceoverHeader) voiceoverHeader.textContent = t.voiceover.title;

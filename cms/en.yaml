@@ -4,7 +4,6 @@ nav:
   showreels: SHOWREELS
   gallery: GALLERY
   cv: CV / RESUME
-  about: ABOUT
   voiceover: VOICE-OVER
   contact: CONTACT
 
@@ -48,7 +47,7 @@ gallery:
 cv:
   title: CV / Resume
   downloadLabel: "Download Full CV (PDF)"
-  downloadUrl: "/media/cv/Maciej-Salamon-CV-2025.pdf"
+  downloadUrl: "/media/cv/Maciej_Salamon_artistic_CV_2026.pdf"
   tabs:
     general:
       title: General Info
@@ -61,6 +60,11 @@ cv:
     filmtv:
       title: Film / TV
       credits:
+        - role: "Gerald"
+          project: "Pupin"
+          year: "2025"
+          director: "Dir: Danilo Beckovic"
+          production: "Mali Budo"
         - role: "Rainer"
           project: "Anywhere"
           year: "2024"
@@ -229,12 +233,6 @@ cv:
         - name: "Musical Theatre Degree"
           institution: "Stella-Academy, Hamburg"
           year: "1998-2000"
-
-about:
-  title: About Matthias
-  subtitle: Actor, Voice Talent & Producer
-  bio1: "<p>Your bio content will go here...</p>"
-  bio2: "<p>More bio content...</p>"
 
 voiceover:
   title: Voice-Over Samples
