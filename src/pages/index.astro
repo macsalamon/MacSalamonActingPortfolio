@@ -3,6 +3,7 @@ import '../styles/global.css';
 import ShowreelSelector from '../components/ShowreelSelector.astro';
 import PhotoGalleryGrid from '../components/PhotoGalleryGrid.astro';
 import CVTabs from '../components/CVTabs.astro';
+import AudioPlayer from '../components/AudioPlayer.astro';
 import { translations } from '../data/content.js';
 
 const currentLang = 'en';
@@ -112,109 +113,123 @@ const t = translations[currentLang];
     </section>
 
     <!-- CV Section -->
-    <section class="section collapsible-section" id="cv">
-      <div class="container">
-        <div class="section-header" data-section="cv">
-          <span class="toggle-icon">+</span>
-          <h2>{t.cv.title}</h2>
-          <span class="toggle-icon">+</span>
+    <section class="section collapsible-section split-section" id="cv">
+      <div class="split-content-col">
+        <div class="container">
+          <div class="section-header" data-section="cv">
+            <span class="toggle-icon">+</span>
+            <h2>{t.cv.title}</h2>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="section-content" data-content="cv">
+            <CVTabs translations={translations} currentLang={currentLang} />
+          </div>
         </div>
-        <div class="section-content" data-content="cv">
-          <CVTabs translations={translations} currentLang={currentLang} />
-        </div>
+      </div>
+      <div class="split-image-col">
+        <img src="/media/headshots/sections/Section_CV.jpg" alt="" loading="lazy" />
       </div>
     </section>
 
     <!-- Voice-Over Section -->
-    <section class="section collapsible-section" id="voiceover">
-      <div class="container">
-        <div class="section-header" data-section="voiceover">
-          <span class="toggle-icon">+</span>
-          <h2>{t.voiceover.title}</h2>
-          <span class="toggle-icon">+</span>
-        </div>
-        <div class="section-content" data-content="voiceover">
-          <p class="text-center mb-md" style="color: var(--color-text-muted);">{t.voiceover.description}</p>
-          <p class="text-center" style="color: var(--color-text-muted);">(Audio player will be added here - please provide audio samples)</p>
+    <section class="section collapsible-section split-section split-section-reverse" id="voiceover">
+      <div class="split-image-col">
+        <img src="/media/headshots/sections/Section_VoiceOver.jpg" alt="" loading="lazy" />
+      </div>
+      <div class="split-content-col">
+        <div class="container">
+          <div class="section-header" data-section="voiceover">
+            <span class="toggle-icon">+</span>
+            <h2>{t.voiceover.title}</h2>
+            <span class="toggle-icon">+</span>
+          </div>
+          <div class="section-content" data-content="voiceover">
+            <AudioPlayer />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section section-alt" id="contact">
-      <div class="container">
-        <div class="contact-content">
-          <h2 class="text-center">{t.contact.title}</h2>
+    <section class="section section-alt split-section" id="contact">
+      <div class="split-content-col">
+        <div class="container">
+          <div class="contact-content">
+            <h2 class="text-center">{t.contact.title}</h2>
 
-          <!-- Contact Methods (Obfuscated) -->
-          <p class="contact-methods-inline">
-            <strong class="contact-email-label">{t.contact.emailLabel}</strong>
-            <a href="#" id="email-link" data-user="info" data-domain="matthiassalamon.com" class="contact-reveal-email">{t.contact.revealEmail}</a>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-            <strong class="contact-phone-label">{t.contact.phoneLabel}</strong>
-            <span id="phone-display" data-phone="+436766002632" class="contact-reveal-phone">{t.contact.revealPhone}</span>
-          </p>
-
-          <!-- Agency Info -->
-          {t.contact.agencyName && (
+            <!-- Contact Methods (Obfuscated) -->
             <p class="contact-methods-inline">
-              <strong>{t.contact.agencyTitle}</strong> {t.contact.agencyName}
-              {t.contact.agencyEmail && <> | <a href={`mailto:${t.contact.agencyEmail}`}>{t.contact.agencyEmail}</a></>}
-              {t.contact.agencyPhone && <> | {t.contact.agencyPhone}</>}
+              <strong class="contact-email-label">{t.contact.emailLabel}</strong>
+              <a href="#" id="email-link" data-user="info" data-domain="matthiassalamon.com" class="contact-reveal-email">{t.contact.revealEmail}</a>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <strong class="contact-phone-label">{t.contact.phoneLabel}</strong>
+              <span id="phone-display" data-phone="+436766002632" class="contact-reveal-phone">{t.contact.revealPhone}</span>
             </p>
-          )}
 
-          <h3 class="contact-subheader">{t.contact.formHeading}</h3>
+            <!-- Agency Info -->
+            {t.contact.agencyName && (
+              <p class="contact-methods-inline">
+                <strong>{t.contact.agencyTitle}</strong> {t.contact.agencyName}
+                {t.contact.agencyEmail && <> | <a href={`mailto:${t.contact.agencyEmail}`}>{t.contact.agencyEmail}</a></>}
+                {t.contact.agencyPhone && <> | {t.contact.agencyPhone}</>}
+              </p>
+            )}
 
-          <!-- Success/Error Messages -->
-          <div id="form-message" class="form-message" style="display: none;"></div>
+            <h3 class="contact-subheader">{t.contact.formHeading}</h3>
 
-          <form class="contact-form" id="contact-form">
-            <!-- Honeypot Field -->
-            <div class="honeypot" aria-hidden="true">
-              <label for="website">Website (leave blank)</label>
-              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-            </div>
+            <!-- Success/Error Messages -->
+            <div id="form-message" class="form-message" style="display: none;"></div>
 
-            <div class="form-group">
-              <label for="name">{t.contact.form.name}</label>
-              <input type="text" id="name" name="name" required aria-required="true">
-            </div>
+            <form class="contact-form" id="contact-form">
+              <!-- Honeypot Field -->
+              <div class="honeypot" aria-hidden="true">
+                <label for="website">Website (leave blank)</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
 
-            <div class="form-group">
-              <label for="email">{t.contact.form.emailLabel}</label>
-              <input type="email" id="email" name="email" required aria-required="true">
-            </div>
+              <div class="form-group">
+                <label for="name">{t.contact.form.name}</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+              </div>
 
-            <div class="form-group">
-              <label for="message">{t.contact.form.message}</label>
-              <textarea id="message" name="message" required aria-required="true" rows="6"></textarea>
-            </div>
+              <div class="form-group">
+                <label for="email">{t.contact.form.emailLabel}</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+              </div>
 
-            <!-- GDPR Consent -->
-            <div class="form-group consent-group">
-              <label class="consent-label">
-                <input type="checkbox" id="consent" name="consent" required aria-required="true">
-                <span class="consent-text" set:html={t.contact.form.consent}></span>
-              </label>
-            </div>
+              <div class="form-group">
+                <label for="message">{t.contact.form.message}</label>
+                <textarea id="message" name="message" required aria-required="true" rows="6"></textarea>
+              </div>
 
-            <!-- Cloudflare Turnstile -->
-            <div id="turnstile-container"></div>
+              <!-- GDPR Consent -->
+              <div class="form-group consent-group">
+                <label class="consent-label">
+                  <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                  <span class="consent-text" set:html={t.contact.form.consent}></span>
+                </label>
+              </div>
 
-            <button type="submit" class="submit-button">{t.contact.form.send}</button>
-          </form>
+              <!-- Cloudflare Turnstile -->
+              <div id="turnstile-container"></div>
 
-          <!-- Casting Profile Links -->
-          <div class="casting-links">
-            <h3>{t.contact.castingProfiles}</h3>
-            <div class="casting-links-list">
-              {t.contact.profiles && t.contact.profiles.map((profile) => (
-                <a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.name}</a>
-              ))}
+              <button type="submit" class="submit-button">{t.contact.form.send}</button>
+            </form>
+
+            <!-- Casting Profile Links -->
+            <div class="casting-links">
+              <h3>{t.contact.castingProfiles}</h3>
+              <div class="casting-links-list">
+                {t.contact.profiles && t.contact.profiles.map((profile) => (
+                  <a href={profile.url} target="_blank" rel="noopener noreferrer">{profile.name}</a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="split-image-col">
+        <img src="/media/headshots/sections/Section_Contact.jpg" alt="" loading="lazy" />
       </div>
     </section>
   </main>
@@ -338,10 +353,13 @@ const t = translations[currentLang];
       if (footerLinks[1]) footerLinks[1].textContent = t.footer.privacy;
     }
 
-    // Collapsible sections
+    // Collapsible sections (mobile only)
     function initCollapsibleSections() {
       document.querySelectorAll('.section-header').forEach(header => {
         header.addEventListener('click', () => {
+          // Only allow collapsing on mobile
+          if (window.innerWidth > 1050) return;
+
           const section = header.getAttribute('data-section');
           const content = document.querySelector(`[data-content="${section}"]`);
           const icons = header.querySelectorAll('.toggle-icon');
@@ -503,31 +521,34 @@ const t = translations[currentLang];
 
           if (!targetSection) return;
 
-          const allContents = document.querySelectorAll('.section-content');
-          allContents.forEach(content => {
-            content.style.transition = 'none';
-            content.classList.remove('open');
-          });
-          document.querySelectorAll('.toggle-icon').forEach(icon => {
-            icon.textContent = '+';
-          });
+          // On mobile: collapse all, open target
+          if (window.innerWidth <= 1050) {
+            const allContents = document.querySelectorAll('.section-content');
+            allContents.forEach(content => {
+              content.style.transition = 'none';
+              content.classList.remove('open');
+            });
+            document.querySelectorAll('.toggle-icon').forEach(icon => {
+              icon.textContent = '+';
+            });
 
-          const targetContent = targetSection.querySelector('.section-content');
-          const targetIcons = targetSection.querySelectorAll('.toggle-icon');
-          if (targetContent) {
-            targetContent.classList.add('open');
-            targetIcons.forEach(icon => {
-              icon.textContent = '-';
+            const targetContent = targetSection.querySelector('.section-content');
+            const targetIcons = targetSection.querySelectorAll('.toggle-icon');
+            if (targetContent) {
+              targetContent.classList.add('open');
+              targetIcons.forEach(icon => {
+                icon.textContent = '-';
+              });
+            }
+
+            document.body.offsetHeight;
+            targetSection.offsetHeight;
+            document.body.offsetHeight;
+
+            allContents.forEach(content => {
+              content.style.transition = '';
             });
           }
-
-          document.body.offsetHeight;
-          targetSection.offsetHeight;
-          document.body.offsetHeight;
-
-          allContents.forEach(content => {
-            content.style.transition = '';
-          });
 
           const targetPosition = targetSection.offsetTop;
           window.scrollTo({

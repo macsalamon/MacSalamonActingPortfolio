@@ -720,6 +720,95 @@ footer {
   text-align: center;
 }
 
+/* ============================
+   DESKTOP LAYOUT (>1050px)
+   Split sections with sticky images
+   ============================ */
+
+/* Desktop: always-open sections, no toggle icons */
+@media (min-width: 1051px) {
+  .toggle-icon {
+    display: none;
+  }
+
+  .section-header {
+    cursor: default;
+    justify-content: center;
+  }
+
+  .section-header:hover h2 {
+    color: var(--color-text);
+  }
+
+  .section-content {
+    max-height: none !important;
+    overflow: visible;
+    padding-bottom: var(--spacing-lg);
+  }
+
+  /* Hero: sticky left image */
+  .hero {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+  .hero-headshot {
+    position: sticky;
+    top: 0;
+    align-self: start;
+  }
+
+  /* Split section grid layout */
+  .split-section {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    padding: 0;
+  }
+
+  .split-section.split-section-reverse {
+    grid-template-columns: 40% 1fr;
+  }
+
+  .split-content-col {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .split-image-col {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .split-image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Contact section: keep content max-width reasonable */
+  #contact .contact-content {
+    max-width: none;
+  }
+}
+
+/* Mobile: hide split images, keep stacked layout */
+@media (max-width: 1050px) {
+  .split-section {
+    display: block;
+  }
+
+  .split-image-col {
+    display: none;
+  }
+
+  .split-content-col {
+    width: 100%;
+  }
+}
+
 /* Responsive */
 @media (max-width: 1050px) {
   .hamburger {
