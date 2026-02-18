@@ -9,8 +9,8 @@ nav:
 
 hero:
   name: Matthias Salamon
-  tagline: Actor & Voice-Over Artist
-  intro: Multilingual actor and voice talent based in Vienna, Austria
+  tagline: Actor & Singer
+  intro: Multilingual voice talent and audio producer based in Vienna, Austria
 
 showreels:
   title: Showreels
@@ -30,7 +30,6 @@ cv:
       eyes: "Eyes: Blue-grey"
       hair: "Hair: Dark blonde"
       voiceType: "Vocal range: Baritone"
-      skills: "Singing (Professional) - Rock, Musical, Classical | Fencing | Sword fighting | Swimming | Guitar (basic) | Driver's license"
     filmtv:
       title: Film / TV
       credits:
@@ -207,6 +206,9 @@ cv:
         - name: "Musical Theatre Degree"
           institution: "Stella-Academy, Hamburg"
           year: "1998-2000"
+        - name: "Skills"
+          institution: "Singing (Professional) – Rock, Musical, Classical | Fencing | Sword fighting | Swimming | Guitar (basic) | Driver's license"
+          year: ""
 
 voiceover:
   title: Voice-Over Samples

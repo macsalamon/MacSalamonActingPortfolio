@@ -15,13 +15,27 @@ const cvData = t.cv;
   <!-- General Info Tab -->
   <div class="cv-content active" data-content="general">
     <div class="cv-info-grid">
-      <p>{cvData.tabs.general.languages}</p>
-      <p>{cvData.tabs.general.height}</p>
-      {cvData.tabs.general.eyes && <p>{cvData.tabs.general.eyes}</p>}
-      {cvData.tabs.general.hair && <p>{cvData.tabs.general.hair}</p>}
-      {cvData.tabs.general.build && <p>{cvData.tabs.general.build}</p>}
-      <p>{cvData.tabs.general.voiceType}</p>
-      <p>{cvData.tabs.general.skills}</p>
+      {[
+        cvData.tabs.general.languages,
+        cvData.tabs.general.height,
+        cvData.tabs.general.eyes,
+        cvData.tabs.general.hair,
+        cvData.tabs.general.build,
+        cvData.tabs.general.voiceType,
+      ].filter(Boolean).map(field => {
+        const parts = field.split(' | ');
+        return (
+          <p class={parts.length > 1 ? 'cv-multiline' : ''}>
+            {parts.map((part, i) => {
+              const colonIndex = part.indexOf(':');
+              if (colonIndex === -1) return <span>{part}{i < parts.length - 1 && <br/>}</span>;
+              const label = part.slice(0, colonIndex);
+              const value = part.slice(colonIndex + 1);
+              return <span><strong>{label}:</strong>{value}{i < parts.length - 1 && <br/>}</span>;
+            })}
+          </p>
+        );
+      })}
     </div>
   </div>
 
@@ -85,6 +99,10 @@ const cvData = t.cv;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+  }
+
+  .cv-info-grid .cv-multiline {
+    line-height: 1.8;
   }
 
   .cv-list {

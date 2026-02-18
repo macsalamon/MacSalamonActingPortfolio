@@ -12,8 +12,8 @@ export const translations = {
     },
     "hero": {
       "name": "Matthias Salamon",
-      "tagline": "Actor & Voice-Over Artist",
-      "intro": "Multilingual actor and voice talent based in Vienna, Austria"
+      "tagline": "Actor & Singer",
+      "intro": "Multilingual voice talent and audio producer based in Vienna, Austria"
     },
     "showreels": {
       "title": "Showreels"
@@ -32,8 +32,7 @@ export const translations = {
           "height": "Height: 180 cm",
           "eyes": "Eyes: Blue-grey",
           "hair": "Hair: Dark blonde",
-          "voiceType": "Vocal range: Baritone",
-          "skills": "Singing (Professional) - Rock, Musical, Classical | Fencing | Sword fighting | Swimming | Guitar (basic) | Driver's license"
+          "voiceType": "Vocal range: Baritone"
         },
         "filmtv": {
           "title": "Film / TV",
@@ -284,6 +283,11 @@ export const translations = {
               "name": "Musical Theatre Degree",
               "institution": "Stella-Academy, Hamburg",
               "year": "1998-2000"
+            },
+            {
+              "name": "Skills",
+              "institution": "Singing (Professional) – Rock, Musical, Classical | Fencing | Sword fighting | Swimming | Guitar (basic) | Driver's license",
+              "year": ""
             }
           ]
         }
@@ -354,8 +358,8 @@ export const translations = {
     },
     "hero": {
       "name": "Matthias Salamon",
-      "tagline": "Schauspieler & Voice-Over-Künstler",
-      "intro": "Mehrsprachiger Schauspieler und Sprecher mit Sitz in Wien, Österreich"
+      "tagline": "Schauspieler und Sänger",
+      "intro": "Mehrsprachiger Sprecher und Audio Produzent"
     },
     "showreels": {
       "title": "Showreels"
@@ -374,8 +378,7 @@ export const translations = {
           "height": "Größe: 180 cm",
           "eyes": "Augen: Blaugrau",
           "hair": "Haare: Dunkelblond",
-          "voiceType": "Stimmfach: Bariton",
-          "skills": "Gesang (Professionell) – Rock, Musical, Klassik | Fechten | Schwertkampf | Schwimmen | Gitarre (Grundkenntnisse) | Führerschein"
+          "voiceType": "Stimmfach: Bariton"
         },
         "filmtv": {
           "title": "Film / TV",
@@ -518,7 +521,7 @@ export const translations = {
             },
             {
               "role": "Ensemble / Cover Chagal",
-              "project": "Dance of the Vampires",
+              "project": "Tanz der Vampire",
               "year": "2018",
               "venue": "Etablissement Ronacher, Wien"
             },
@@ -566,7 +569,7 @@ export const translations = {
             },
             {
               "role": "Swing / 2. Prof. Abronsius / 2. Chagal, Cover Nightmare solo",
-              "project": "Dance of the Vampires",
+              "project": "Tanz der Vampire",
               "year": "2008-2010",
               "venue": "Metronom Theater, Oberhausen / Palladium Theater, Stuttgart"
             },
@@ -626,6 +629,11 @@ export const translations = {
               "name": "Musical-Theatre-Abschluss",
               "institution": "Stella-Academy, Hamburg",
               "year": "1998-2000"
+            },
+            {
+              "name": "Fähigkeiten",
+              "institution": "Gesang (Professionell) – Rock, Musical, Klassik | Fechten | Schwertkampf | Schwimmen | Gitarre (Grundkenntnisse) | Führerschein",
+              "year": ""
             }
           ]
         }
@@ -696,8 +704,8 @@ export const translations = {
     },
     "hero": {
       "name": "Matthias Salamon",
-      "tagline": "Aktor & Artysta Voice-Over",
-      "intro": "Wielojęzyczny aktor i lektor mieszkający w Wiedniu, Austria"
+      "tagline": "Aktor i Wokalista",
+      "intro": "Wielojęzyczny lektor i producent audio"
     },
     "showreels": {
       "title": "Showreele"
@@ -716,8 +724,7 @@ export const translations = {
           "height": "Wzrost: 180 cm",
           "eyes": "Oczy: niebiesko-szare",
           "hair": "Włosy: ciemny blond",
-          "voiceType": "Głos: baryton",
-          "skills": "Śpiew (profesjonalny) – rock, musical, klasyczny | Szermierka | Walka na miecze | Pływanie | Gitara (podstawy) | Prawo jazdy"
+          "voiceType": "Głos: baryton"
         },
         "filmtv": {
           "title": "Film / TV",
@@ -860,7 +867,7 @@ export const translations = {
             },
             {
               "role": "Ensemble / Cover Chagal",
-              "project": "Dance of the Vampires",
+              "project": "Taniec Wampirów",
               "year": "2018",
               "venue": "Etablissement Ronacher, Wiedeń"
             },
@@ -908,7 +915,7 @@ export const translations = {
             },
             {
               "role": "Swing / 2. Prof. Abronsius / 2. Chagal, Cover Nightmare solo",
-              "project": "Dance of the Vampires",
+              "project": "Taniec Wampirów",
               "year": "2008-2010",
               "venue": "Metronom Theater, Oberhausen / Palladium Theater, Stuttgart"
             },
@@ -968,6 +975,11 @@ export const translations = {
               "name": "Dyplom Musical Theatre",
               "institution": "Stella-Academy, Hamburg",
               "year": "1998-2000"
+            },
+            {
+              "name": "Umiejętności",
+              "institution": "Śpiew (profesjonalny) – rock, musical, klasyczny | Szermierka | Walka na miecze | Pływanie | Gitara (podstawy) | Prawo jazdy",
+              "year": ""
             }
           ]
         }

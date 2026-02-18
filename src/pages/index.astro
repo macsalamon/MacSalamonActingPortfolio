@@ -377,9 +377,19 @@ const t = translations[currentLang];
       const generalContent = document.querySelector('[data-content="general"] .cv-info-grid');
       if (generalContent && cv.tabs.general) {
         const g = cv.tabs.general;
-        const fields = [g.languages, g.height, g.eyes, g.hair, g.build, g.voiceType, g.skills]
+        const fields = [g.languages, g.height, g.eyes, g.hair, g.build, g.voiceType]
           .filter(Boolean);
-        generalContent.innerHTML = fields.map(f => `<p>${f}</p>`).join('');
+        generalContent.innerHTML = fields.map(f => {
+          const parts = f.split(' | ');
+          const inner = parts.map((part, i) => {
+            const colonIndex = part.indexOf(':');
+            const formatted = colonIndex === -1
+              ? part
+              : `<strong>${part.slice(0, colonIndex)}:</strong>${part.slice(colonIndex + 1)}`;
+            return formatted + (i < parts.length - 1 ? '<br>' : '');
+          }).join('');
+          return `<p${parts.length > 1 ? ' class="cv-multiline"' : ''}>${inner}</p>`;
+        }).join('');
       }
 
       // Film/TV credits

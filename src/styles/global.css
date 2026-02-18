@@ -729,6 +729,33 @@ footer {
 
 /* Desktop: always-open sections, no toggle icons */
 @media (min-width: 1051px) {
+  /* Showreels and Gallery fill the full viewport height like split sections */
+  #showreels,
+  #gallery {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Let the showreel player use the full section width — remove container capping */
+  #showreels .container {
+    max-width: none;
+    padding: 0 var(--spacing-xl);
+    width: 100%;
+  }
+
+  #showreels .showreel-container {
+    max-width: none;
+    width: 100%;
+  }
+
+  /* Balanced vertical padding for showreels — less top, more bottom */
+  #showreels {
+    padding-top: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+  }
+
   .toggle-icon {
     display: none;
   }

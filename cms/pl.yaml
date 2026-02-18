@@ -9,8 +9,8 @@ nav:
 
 hero:
   name: Matthias Salamon
-  tagline: Aktor & Artysta Voice-Over
-  intro: Wielojęzyczny aktor i lektor mieszkający w Wiedniu, Austria
+  tagline: Aktor i Wokalista
+  intro: Wielojęzyczny lektor i producent audio
 
 showreels:
   title: Showreele
@@ -30,7 +30,6 @@ cv:
       eyes: "Oczy: niebiesko-szare"
       hair: "Włosy: ciemny blond"
       voiceType: "Głos: baryton"
-      skills: "Śpiew (profesjonalny) – rock, musical, klasyczny | Szermierka | Walka na miecze | Pływanie | Gitara (podstawy) | Prawo jazdy"
     filmtv:
       title: Film / TV
       credits:
@@ -131,7 +130,7 @@ cv:
           year: "2020"
           venue: "Visp (Szwajcaria)"
         - role: "Ensemble / Cover Chagal"
-          project: "Dance of the Vampires"
+          project: "Taniec Wampirów"
           year: "2018"
           venue: "Etablissement Ronacher, Wiedeń"
         - role: "Profesor"
@@ -165,7 +164,7 @@ cv:
           director: "Reż: Ben Elton"
           venue: "Theater 11, Zurych / Raimund Theater, Wiedeń / Theater des Westens, Berlin"
         - role: "Swing / 2. Prof. Abronsius / 2. Chagal, Cover Nightmare solo"
-          project: "Dance of the Vampires"
+          project: "Taniec Wampirów"
           year: "2008-2010"
           venue: "Metronom Theater, Oberhausen / Palladium Theater, Stuttgart"
         - role: "Emil Perthes / 2. Conrad Meyer"
@@ -207,6 +206,9 @@ cv:
         - name: "Dyplom Musical Theatre"
           institution: "Stella-Academy, Hamburg"
           year: "1998-2000"
+        - name: "Umiejętności"
+          institution: "Śpiew (profesjonalny) – rock, musical, klasyczny | Szermierka | Walka na miecze | Pływanie | Gitara (podstawy) | Prawo jazdy"
+          year: ""
 
 voiceover:
   title: Próbki Voice-Over

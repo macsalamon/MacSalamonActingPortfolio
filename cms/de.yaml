@@ -9,8 +9,8 @@ nav:
 
 hero:
   name: Matthias Salamon
-  tagline: Schauspieler & Voice-Over-Künstler
-  intro: Mehrsprachiger Schauspieler und Sprecher mit Sitz in Wien, Österreich
+  tagline: Schauspieler und Sänger
+  intro: Mehrsprachiger Sprecher und Audio Produzent
 
 showreels:
   title: Showreels
@@ -30,7 +30,6 @@ cv:
       eyes: "Augen: Blaugrau"
       hair: "Haare: Dunkelblond"
       voiceType: "Stimmfach: Bariton"
-      skills: "Gesang (Professionell) – Rock, Musical, Klassik | Fechten | Schwertkampf | Schwimmen | Gitarre (Grundkenntnisse) | Führerschein"
     filmtv:
       title: Film / TV
       credits:
@@ -131,7 +130,7 @@ cv:
           year: "2020"
           venue: "Visp (Schweiz)"
         - role: "Ensemble / Cover Chagal"
-          project: "Dance of the Vampires"
+          project: "Tanz der Vampire"
           year: "2018"
           venue: "Etablissement Ronacher, Wien"
         - role: "Professor"
@@ -165,7 +164,7 @@ cv:
           director: "Reg: Ben Elton"
           venue: "Theater 11, Zürich / Raimund Theater, Wien / Theater des Westens, Berlin"
         - role: "Swing / 2. Prof. Abronsius / 2. Chagal, Cover Nightmare solo"
-          project: "Dance of the Vampires"
+          project: "Tanz der Vampire"
           year: "2008-2010"
           venue: "Metronom Theater, Oberhausen / Palladium Theater, Stuttgart"
         - role: "Emil Perthes / 2. Conrad Meyer"
@@ -207,6 +206,9 @@ cv:
         - name: "Musical-Theatre-Abschluss"
           institution: "Stella-Academy, Hamburg"
           year: "1998-2000"
+        - name: "Fähigkeiten"
+          institution: "Gesang (Professionell) – Rock, Musical, Klassik | Fechten | Schwertkampf | Schwimmen | Gitarre (Grundkenntnisse) | Führerschein"
+          year: ""
 
 voiceover:
   title: Voice-Over-Hörproben
