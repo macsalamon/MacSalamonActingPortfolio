@@ -99,7 +99,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow-x: hidden;
-  overscroll-behavior: none; /* Prevents rubber-band scrolling into off-screen areas */
+  overscroll-behavior-x: none; /* Prevents horizontal rubber-band scrolling only */
   width: 100%;
   max-width: 100vw;
 }
