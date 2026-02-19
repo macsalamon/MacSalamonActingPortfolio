@@ -5,6 +5,11 @@ import PhotoGalleryGrid from '../components/PhotoGalleryGrid.astro';
 import CVTabs from '../components/CVTabs.astro';
 import AudioPlayer from '../components/AudioPlayer.astro';
 import { translations } from '../data/content.js';
+import { Image } from 'astro:assets';
+import heroPortrait from '../assets/headshots/sections/Hero_Portrait.jpg';
+import sectionCV from '../assets/headshots/sections/Section_CV.jpg';
+import sectionVoiceOver from '../assets/headshots/sections/Section_VoiceOver.jpg';
+import sectionContact from '../assets/headshots/sections/Section_Contact.jpg';
 
 const currentLang = 'en';
 const t = translations[currentLang];
@@ -74,7 +79,7 @@ const t = translations[currentLang];
       <h1 class="sr-only">{t.hero.name} - {t.hero.tagline}</h1>
 
       <div class="hero-headshot">
-        <img src="/media/Hero_Portrait.jpg" alt={t.hero.name} />
+        <Image src={heroPortrait} alt={t.hero.name} width={800} height={1200} quality={85} format="webp" loading="eager" />
       </div>
 
       <div class="hero-content">
@@ -127,14 +132,14 @@ const t = translations[currentLang];
         </div>
       </div>
       <div class="split-image-col">
-        <img src="/media/headshots/sections/Section_CV.jpg" alt="" loading="lazy" />
+        <Image src={sectionCV} alt="" width={800} height={1200} quality={85} format="webp" loading="lazy" />
       </div>
     </section>
 
     <!-- Voice-Over Section -->
     <section class="section collapsible-section split-section split-section-reverse" id="voiceover">
       <div class="split-image-col">
-        <img src="/media/headshots/sections/Section_VoiceOver.jpg" alt="" loading="lazy" />
+        <Image src={sectionVoiceOver} alt="" width={800} height={1200} quality={85} format="webp" loading="lazy" />
       </div>
       <div class="split-content-col">
         <div class="container">
@@ -234,7 +239,7 @@ const t = translations[currentLang];
         </div>
       </div>
       <div class="split-image-col">
-        <img src="/media/headshots/sections/Section_Contact.jpg" alt="" loading="lazy" />
+        <Image src={sectionContact} alt="" width={800} height={1200} quality={85} format="webp" loading="lazy" />
       </div>
     </section>
   </main>
