@@ -842,6 +842,19 @@ footer {
 
 /* Responsive */
 @media (max-width: 1050px) {
+  /* overflow-x: hidden on html breaks position:sticky, so use fixed on mobile instead */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  main {
+    padding-top: 88px;
+  }
+
   .hamburger {
     display: flex;
   }
