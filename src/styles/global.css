@@ -809,6 +809,11 @@ footer {
 
   .split-content-col {
     padding: var(--spacing-xl) 0;
+    height: 100vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
+    align-self: start;
   }
 
   .split-image-col {
