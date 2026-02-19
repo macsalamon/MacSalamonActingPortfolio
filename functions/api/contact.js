@@ -70,7 +70,7 @@ export async function onRequestPost(context) {
       from: 'Matthias Salamon <noreply@matthiassalamon.com>',
       to: ['info@matthiassalamon.com'],
       reply_to: email,
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `MacActing message from: ${name}`,
       html: `<!DOCTYPE html>
 <html>
 <head>
