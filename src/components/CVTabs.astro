@@ -95,6 +95,27 @@ const cvData = t.cv;
 </div>
 
 <style>
+  /* On desktop the cv-section fills the column and only the tab content scrolls */
+  @media (min-width: 1051px) {
+    .cv-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .cv-content {
+      flex: 1;
+      overflow-y: auto;
+      min-height: 0;
+    }
+
+    .cv-content.active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   .cv-info-grid {
     display: flex;
     flex-direction: column;
